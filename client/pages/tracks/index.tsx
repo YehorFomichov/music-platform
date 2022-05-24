@@ -1,7 +1,8 @@
 import React from "react";
+import TracksPage from "../../components/pages/tracks-page";
 
 const Index = () => {
-  return <div>All tracks Page</div>;
+  return <TracksPage />;
 };
 
 export default Index;

@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import MainPage from "../components/pages/main-page";
-
 const Index = () => {
-  return (
-    <>
-      <MainPage />
-    </>
-  );
+  return <MainPage />;
 };
 
 export default Index;

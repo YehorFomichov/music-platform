@@ -1,0 +1,28 @@
+.container {
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.upload:hover {
+    text-underline: #1a1e23;
+    text-decoration: underline;
+    border-radius: 13px;
+    text-underline-offset: 10px;
+}
+.tracksContainer {
+    display: inline-block;
+}
+
+/* Element */

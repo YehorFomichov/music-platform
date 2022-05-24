@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 8vw
+
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    margin: 1vh 0;
+}
+.image img {
+    width: 250px;
+    height: auto;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

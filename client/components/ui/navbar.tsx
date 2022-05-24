@@ -8,7 +8,7 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
   const inputRef = useRef(null);
   useEffect(() => {
     return () => {
-      console.log((inputRef.current.checked = false));
+      inputRef.current.checked = false;
     };
   }, []);
   return (
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
           <div className={styles.menuInner}>
             <ul className={styles.menuNav}>
               <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="#">
+                <a className={styles.menuNavLink} href="/">
                   <span>
                     <div>Home</div>
                   </span>

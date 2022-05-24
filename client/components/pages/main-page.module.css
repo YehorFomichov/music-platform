@@ -1,10 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 .container {
+    background-image: url("/main-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 91.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    font-family: Lora, sans-serif;
+    overflow: hidden;
 }
