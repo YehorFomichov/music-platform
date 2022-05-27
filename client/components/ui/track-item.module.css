@@ -5,11 +5,20 @@
     flex-direction: row;
     align-items: center;
     margin: 10px;
-    border-radius: 2px;
+    border-radius: 4px;
     box-sizing: border-box;
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
 }
 .trackElement:hover {
-    background-color: rgba(0, 0, 0, 0.11);
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+.trackElement .btn:hover {
 }
 .btn {
     width: 70px;
@@ -20,6 +29,7 @@
     margin: 0 4px;
     font-size: 37px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .trackImage {
     height: 50px;
@@ -42,7 +52,6 @@
     overflow: hidden;
     justify-content: center;
     box-sizing: border-box;
-
 }
 .trackName {
     font-size: medium;

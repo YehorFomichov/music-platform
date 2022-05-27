@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProgressBar from "../components/ui/progress-bar";
 import UploadPage from "../components/pages/upload-page";
 
-const Upload: React.FC<StepWrapperProps> = () => {
+const Upload = () => {
   const [step, setStep] = useState(1);
   const handleChangeStep = (action: string): void => {
     if (action === "previous") {
@@ -12,7 +12,6 @@ const Upload: React.FC<StepWrapperProps> = () => {
       setStep((prevState) => prevState + 1);
     }
     if (action === "finish") {
-      console.log("data");
     }
   };
   return (

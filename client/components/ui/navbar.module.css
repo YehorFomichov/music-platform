@@ -5,9 +5,13 @@
   margin: 0;
   font-family: Lora, sans-serif;
   overflow: hidden;
+  background-color: var(--white);
 }
 .container p {
   margin: 0;
+}
+.container a:hover {
+  color: var(--yellow)
 }
 #burgerToggle {
   position: relative;
@@ -20,7 +24,7 @@
 }
 #burgerToggle:checked ~ .menu .menuNavLink span div, #burgerToggle:checked ~ .menu img, #burgerToggle:checked ~ .menu .title p {
   transform: translateY(0);
-  transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
+  transition: 0.7s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
 }
 #burgerToggle:checked ~ .menu .imageLink:nth-child(1) img {
   transition-delay: 0.18s;
@@ -83,7 +87,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #313131;
+  background: var(--yellow);
   transform: translateX(-100%);
   transition: 0.25s;
 }
@@ -106,7 +110,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #1a1e23;
+  background: var(--black);
   opacity: 0;
   overflow-x: hidden;
   visibility: hidden;
@@ -137,7 +141,7 @@
   position: relative;
   display: inline-flex;
   font-size: 2rem;
-  color: white;
+  color: var(--white);
   text-decoration: none;
 }
 .menuNavLink span {
@@ -153,7 +157,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: white;
+  background: var(--white);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s;
@@ -168,7 +172,7 @@
 }
 .menu .title {
   font-size: 24px;
-  color: white;
+  color: var(--white);
   overflow: hidden;
 }
 .menu .title p {
@@ -213,7 +217,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  color: white;
   background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   transition: 0.4s;

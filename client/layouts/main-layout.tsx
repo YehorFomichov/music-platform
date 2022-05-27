@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/ui/navbar";
+import Player from "../components/ui/player";
 interface LayoutInterface {
   children: React.ReactNode;
 }
@@ -15,6 +16,7 @@ const MainLayout: React.FC<LayoutInterface> = ({ children }) => {
     <>
       <Navbar showNavBar={showNavBar} onToggleNavbar={handleToggleNavbar} />
       {children}
+      <Player />
     </>
   );
 };

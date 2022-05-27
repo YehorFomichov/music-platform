@@ -1,22 +1,14 @@
-import React from "react";
-import { ITrack } from "../../types/track";
+import React, { useState } from "react";
 import styles from "../../styles/track-page.module.css";
 import { useRouter } from "next/router";
-const trackData = {
-  _id: "asdqw2",
-  name: "Snow",
-  artist: "RHCP",
-  image:
-    "https://unsplash.com/photos/79-UsUCtTYA/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MjB8fGFsYnVtfGVufDB8fHx8MTY1Mjg2NjM2Ng&force=true&w=640",
-  audio: "sdaq path",
-  lyrics: "snow lyrics",
-  listens: 0,
-  comments: [{ _id: "asd1", username: "Gregory", text: "some text" }],
-};
+import { GetServerSideProps } from "next";
+import trackService from "../../service/tracksService";
+import httpService from "../../service/httpService";
+import axios from "axios";
 
-const TrackPage = () => {
+const TrackPage = ({ serverTrack }) => {
+  const [track, setTrack] = useState(serverTrack);
   const router = useRouter();
-  const track: ITrack = trackData;
   return (
     <div className={styles.container}>
       <div className={styles.return}>
@@ -26,7 +18,7 @@ const TrackPage = () => {
       </div>
       <div className={styles.info}>
         <div className={styles.image}>
-          <img src={track.image} />
+          <img src={"http://localhost:5000/" + track.image} />
         </div>
         <div className={styles.about}>
           <h2 className={styles.composer}>Artist: {track.artist}</h2>
@@ -49,6 +41,14 @@ const TrackPage = () => {
       </div>
     </div>
   );
+};
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const { data } = await axios.get(`http://localhost:5000/tracks/${params.id}`);
+  return {
+    props: {
+      serverTrack: data,
+    },
+  };
 };
 
 export default TrackPage;

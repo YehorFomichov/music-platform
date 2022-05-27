@@ -3,6 +3,10 @@ import InputForm from "../common/input-form";
 import TextForm from "../common/text-form";
 import { validator } from "../../utils/validator";
 import FileUpload from "../common/file-upload";
+import httpService from "../../service/httpService";
+import trackSlice from "../../store/trackSlice";
+import trackService from "../../service/tracksService";
+import { useRouter } from "next/router";
 interface UploadPageProps {
   step: number;
   onChangeStep: (action: string) => void;
@@ -17,45 +21,52 @@ interface DataInterface {
 }
 
 const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
+  const router = useRouter();
   const [data, setData] = useState({
-    track: "",
+    name: "",
     artist: "",
     lyrics: "",
+    image: null,
+    audio: null,
   });
   const [errors, setErrors] = useState({});
   const handleChange = (target) => {
+    console.log(target);
     setData((prevState) => ({
       ...prevState,
       [target.name]: target.value,
     }));
+    console.log(data);
   };
   const validatorConfig = {
-    email: {
+    track: {
       isRequired: {
-        message: "Электронная почта обязательна для заполнения",
-      },
-      isEmail: {
-        message: "Email введен некорректно",
+        message: "You need to enter the track name",
       },
     },
-    password: {
+    artist: {
       isRequired: {
-        message: "Пароль обязателен для заполнения",
+        message: "You need to enter the track artist",
       },
-      isCapitalSymbol: {
-        message: "Пароль должен содержать хотя бы одну заглавную букву",
+    },
+    lyrics: {
+      isRequired: {
+        message: "You need to enter lyrics",
       },
-      isContainDigit: {
-        message: "Пароль должен содержать хотя бы одно число",
+    },
+    image: {
+      isRequired: {
+        message: "Please upload your image",
       },
-      min: {
-        message: "Пароль должен состоять минимум из 8 символов",
-        value: 8,
+    },
+    audio: {
+      isRequired: {
+        message: "Please upload your audio",
       },
     },
   };
   useEffect(() => {
-    validate();
+    // validate();
   }, [data]);
   const validate = () => {
     const errors = validator(data, validatorConfig);
@@ -71,7 +82,12 @@ const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
   };
   const handleFinish = () => {
     onChangeStep("finish");
-    console.log(data);
+    const formData = new FormData();
+    Object.keys(data).forEach((el) => {
+      formData.append(el, data[el]);
+    });
+    trackService.uploadTrack(formData);
+    router.push("/tracks");
   };
   if (step === 1) {
     return (
@@ -79,9 +95,9 @@ const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
         <h3 className="my-4">Track info</h3>
         <InputForm
           label={"Enter track name:"}
-          name={"track"}
+          name={"name"}
           type={"text"}
-          value={data.track}
+          value={data.name}
           onChange={handleChange}
           error={null}
         />
@@ -114,7 +130,7 @@ const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
     return (
       <div>
         <h3 className="my-4">Track cover</h3>
-        <FileUpload setFile={() => {}} accept={"image/*"}>
+        <FileUpload setFile={handleChange} accept={"image/*"} name="image">
           <button className="btn btn-outline-dark mb-5">Upload cover</button>
         </FileUpload>
         <div className="d-flex justify-content-between">
@@ -132,7 +148,7 @@ const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
     return (
       <div>
         <h3 className="my-4">Track audio</h3>
-        <FileUpload setFile={() => {}} accept={"audio/*"}>
+        <FileUpload setFile={handleChange} accept={"audio/*"} name="audio">
           <button className="btn btn-outline-dark mb-5">Upload audio</button>
         </FileUpload>
         <div className="d-flex justify-content-between">
