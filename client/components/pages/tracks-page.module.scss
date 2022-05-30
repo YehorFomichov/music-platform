@@ -1,0 +1,87 @@
+.container {
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 2vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    border-radius: 5px;
+}
+.header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 72px 16px 16px;
+    z-index: 0;
+    background: linear-gradient(rgb(80, 48, 56) 0%, transparent 100%);
+    h1 {
+        margin: 0;
+        overflow: hidden;
+        text-align: start;
+        text-overflow: ellipsis;
+        white-space: unset;
+        word-break: break-word;
+        box-sizing: border-box;
+        margin-block: 0px;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+        color: var(--white);
+    }
+}
+.header_image_wrapper {
+    box-sizing: border-box;
+    align-items: center;
+    align-self: center;
+    aspect-ratio: 1/1;
+    background-color: #535353;
+    display: flex;
+    filter: drop-shadow(0 0 18.3529px rgba(0,0,0,.3));
+    justify-content: center;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transform: translateZ(0);
+    width: clamp(144px,40vw,288px);
+    opacity: 1;
+}
+.header_image {
+    text-transform: none;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+    width: 100%;
+}
+.header_about {
+    overflow: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: unset;
+    word-break: break-word;
+    color: rgba(255,255,255,.7);
+    display: -webkit-box;
+    p {
+        text-transform: none;
+        text-align: start;
+        white-space: unset;
+        word-break: break-word;
+        box-sizing: border-box;
+        margin-block: 0px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+    }
+}
+.tracks_list_container {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+    text-transform: none;
+    box-sizing: border-box;
+    transform: translateY(0px);
+}
+

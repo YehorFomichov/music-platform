@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/someStyles.scss";
 import MainLayout from "../layouts/main-layout";
 import "bootstrap/dist/css/bootstrap.css";
 import { Provider } from "react-redux";

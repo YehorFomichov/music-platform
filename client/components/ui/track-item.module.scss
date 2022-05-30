@@ -1,0 +1,165 @@
+@mixin dCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.track_element_container {
+    box-sizing: border-box;
+    margin: 2px 0px;
+    display: flex;
+    flex-direction: row;
+    button {
+        box-sizing: border-box;
+        border: 0px;
+        touch-action: manipulation;
+        -webkit-box-align: center;
+        align-items: center;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        color: rgb(255, 255, 255);
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+        height: 72px;
+        position: relative;
+        width: 100%;
+        padding: 8px 16px;
+        max-width: calc(100% - 56px);
+    }
+    span {
+        color: rgb(255, 255, 255);
+        text-transform: none;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        button {
+            box-sizing: border-box;
+            background: transparent;
+            border: 0px;
+            transition: background-color 0.2s ease 0s;
+            touch-action: manipulation;
+            width: 46px;
+            overflow: hidden;
+            padding: 20px 12px;
+            display: flex;
+        }
+    }
+}
+.order {
+    box-sizing: border-box;
+    min-width: 40px;
+    margin-right: 16px;
+    @include dCenter;
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 16px;
+        color: rgb(179, 179, 179);
+    }
+}
+.playing {
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgb(179, 179, 179);
+    min-width: 40px;
+    margin-right: 16px;
+    @include dCenter;
+}
+.span_1 {
+    text-align: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+}
+.span_2 {
+    text-align: left;
+    unicode-bidi: isolate;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: rgb(179, 179, 179);
+}
+
+.trackElement {
+    width: 99%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+}
+.trackElement:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+.trackElement .btn:hover {
+}
+.btn {
+    width: 70px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    font-size: 37px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.trackImage {
+    height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid grey;
+    border-radius: 20px;
+    margin: 2px 4px;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+.info {
+    width: 75px;
+    height: 75px;
+    margin: 0 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.trackName {
+    font-size: medium;
+    font-weight: normal;
+}
+.trackArtist {
+    font-size: medium;
+    font-weight: normal;
+}
+.playback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 50px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+}

@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 .container {
+  position: absolute;
   display: flex;
   align-items: center;
   margin: 0;
   font-family: Lora, sans-serif;
   overflow: hidden;
-  background-color: var(--white);
 }
 .container p {
   margin: 0;
@@ -14,7 +14,6 @@
   color: var(--yellow)
 }
 #burgerToggle {
-  position: relative;
   appearance: none;
   opacity: 0;
 }
@@ -51,7 +50,7 @@
   transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
 }
 .burgerMenu {
-  --burger-menu-radius: 4em;
+  --burger-menu-radius: 3.5em;
   position: relative;
   left: 1vw;
   z-index: 100;
@@ -66,7 +65,8 @@
   left: 25%;
   width: 50%;
   height: 3px;
-  background: rgba(43, 61, 79, 0.3);
+  background: white;
+  /*background: rgba(43, 61, 79, 0.3);*/
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;

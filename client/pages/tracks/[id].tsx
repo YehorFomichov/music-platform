@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import styles from "../../styles/track-page.module.css";
 import { useRouter } from "next/router";
 import { GetServerSideProps } from "next";
-import trackService from "../../service/tracksService";
-import httpService from "../../service/httpService";
 import axios from "axios";
 
 const TrackPage = ({ serverTrack }) => {
-  const [track, setTrack] = useState(serverTrack);
+  const track = serverTrack;
   const router = useRouter();
   return (
     <div className={styles.container}>

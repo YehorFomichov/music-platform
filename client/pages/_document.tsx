@@ -9,7 +9,7 @@ export default function Document() {
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css"
         />
       </Head>
-      <body>
+      <body id={"bootstrap-overrides"}>
         <Main />
         <NextScript />
       </body>

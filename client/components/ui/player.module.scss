@@ -1,3 +1,51 @@
+.player_container {
+    box-sizing: border-box;
+    bottom: 0;
+    display: grid;
+    position: fixed;
+    width: 100%;
+}
+.player {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: grid;
+    gap: 0 8px;
+    height: 56px;
+    padding: 8px;
+    position: relative;
+    transition: background-color .2s ease-in-out;
+    z-index: 1;
+    margin-bottom: 8px;
+    background-color: rgb(200, 64, 40);
+}
+.image_container {
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: grid;
+    gap: 0 8px;
+    grid-template-areas: "image titles actions" "image titles actions" "progress progress progress";
+    grid-template-columns: auto 1fr auto;
+    height: 56px;
+    position: relative;
+    transition: background-color .2s ease-in-out;
+    z-index: 1;
+    img {
+        box-sizing: border-box;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 4px;
+        grid-area: image;
+        height: 40px;
+        margin-inline-end: 4px;
+        width: 40px;
+    }
+}
+
+
+/**/
 .trackElement {
     width: 99%;
     height: 70px;
@@ -5,20 +53,11 @@
     flex-direction: row;
     align-items: center;
     margin: 10px;
-    border-radius: 4px;
+    border-radius: 2px;
     box-sizing: border-box;
-    transition-property: background-color, color;
-    transition-duration: 0.1s;
-    transition-timing-function: ease-out;
 }
 .trackElement:hover {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    transition-property: background-color, color;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-out;
-}
-.trackElement .btn:hover {
+    background-color: rgba(0, 0, 0, 0.11);
 }
 .btn {
     width: 70px;
@@ -52,6 +91,7 @@
     overflow: hidden;
     justify-content: center;
     box-sizing: border-box;
+
 }
 .trackName {
     font-size: medium;

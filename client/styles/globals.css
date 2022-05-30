@@ -9,4 +9,5 @@ body {
     --yellow: #FCA311;
     --grey: #E5E5E5;
     --white: rgb(255, 255, 255);
+    background: var(--black);
 }
