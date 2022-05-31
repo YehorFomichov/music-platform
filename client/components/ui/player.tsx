@@ -6,8 +6,6 @@ import { useActions } from "../../hooks/useActions";
 import { average } from "color.js";
 const path = "http://localhost:5000/";
 let audio;
-let audioPath =
-  "http://localhost:5000/audio/d5ebc703-2a47-456f-ba1a-45cb3b9578b1.mp3";
 
 const Player = () => {
   const [aC, setAC] = useState([0, 0, 0]);
@@ -59,12 +57,11 @@ const Player = () => {
     }
   };
   function play() {
+    console.log(pause);
     if (pause) {
       playTrack();
-      audio.play();
     } else {
       pauseTrack();
-      audio.pause();
     }
   }
   const changeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -83,6 +80,14 @@ const Player = () => {
     }
     setAverageColor();
   }, [active]);
+  useEffect(() => {
+    if (!active) return;
+    if (!pause) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }, [pause]);
   if (!active) {
     return null;
   }
@@ -92,8 +97,23 @@ const Player = () => {
         className={styles.player}
         style={{ backgroundColor: `rgb(${aC[0]}, ${aC[1]}, ${aC[2]}, 0.5)` }}
       >
-        <div className={styles.image_container}>
+        <div className={styles.track_container}>
           <img src={path + active.image} />
+          <div className={styles.track_about}>
+            <p>
+              <b>{active.name}</b>
+            </p>
+            <p>{active.artist}</p>
+          </div>
+          {!pause ? (
+            <div className={styles.play_button} onClick={play}>
+              <i className="bi bi-pause-circle"></i>
+            </div>
+          ) : (
+            <div className={styles.play_button} onClick={play}>
+              <i className="bi bi-play-circle"></i>
+            </div>
+          )}
         </div>
       </div>
     </div>

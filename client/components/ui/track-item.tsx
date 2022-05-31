@@ -37,9 +37,15 @@ const TrackItem: React.FC<TrackProps> = ({
     <div className={styles.track_element_container}>
       <button onClick={play}>
         {track._id === active?._id ? (
-          <span className={styles.playing}>
-            <i className="bi bi-play-circle"></i>
-          </span>
+          pause ? (
+            <span className={styles.playing}>
+              <i className="bi bi-play-circle"></i>
+            </span>
+          ) : (
+            <span className={styles.playing}>
+              <i className="bi bi-pause-circle"></i>
+            </span>
+          )
         ) : (
           <span className={styles.order}>
             <p>{index + 1}</p>
