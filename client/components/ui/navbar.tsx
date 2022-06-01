@@ -35,9 +35,9 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
                 </a>
               </li>
               <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="#">
+                <a className={styles.menuNavLink} href="/login">
                   <span>
-                    <div>About</div>
+                    <div>Sign-in</div>
                   </span>
                 </a>
               </li>

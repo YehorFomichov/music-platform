@@ -12,12 +12,7 @@ interface TrackProps {
   index: number;
 }
 
-const TrackItem: React.FC<TrackProps> = ({
-  track,
-  isActive,
-  onPlay,
-  index,
-}) => {
+const TrackItem: React.FC<TrackProps> = ({ track, onPlay, index }) => {
   const router = useRouter();
   const { active, pause } = useTypedSelector((state) => state.player);
   const { playTrack, setActiveTrack, pauseTrack } = useActions();
@@ -59,55 +54,6 @@ const TrackItem: React.FC<TrackProps> = ({
       <span>
         <button>...</button>
       </span>
-    </div>
-  );
-  return (
-    <tbody onClick={play}>
-      <tr>
-        <th>{index}</th>
-        <td className="d-flex flex-row align-items-center">
-          <div
-            className={styles.trackImage}
-            style={{
-              backgroundImage: `url("http://localhost:5000/${track.image}")`,
-            }}
-          ></div>
-          {track.artist} - {track.name}
-        </td>
-        <td>Some album</td>
-        <td>27.5.2022</td>
-        <td>Duration</td>
-      </tr>
-    </tbody>
-  );
-  return (
-    <div
-      className={styles.trackElement}
-      onClick={() => router.push(`/tracks/${track._id}`)}
-    >
-      {isActive ? (
-        <div className={styles.btn} onClick={play}>
-          <i className="bi-play-circle-fill"></i>
-        </div>
-      ) : (
-        <div className={styles.btn} onClick={play}>
-          <i
-            className="bi bi-play-circle"
-            onClick={() => onPlay(track._id)}
-          ></i>
-        </div>
-      )}
-      <div
-        className={styles.trackImage}
-        style={{
-          backgroundImage: `url("http://localhost:5000/${track.image}")`,
-        }}
-      ></div>
-      <div className={styles.info}>
-        <h5 className={styles.trackName}>{track.name}</h5>
-        <h5 className={styles.trackArtist}>{track.artist}</h5>
-      </div>
-      {isActive && <div className={styles.playback}>02:42/03:15</div>}
     </div>
   );
 };

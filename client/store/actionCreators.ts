@@ -7,7 +7,7 @@ import {
   setVolume,
 } from "./playerSlice";
 import { loadTracks } from "./trackSlice";
-
+import { openModal, closeModal } from "./modalSlice";
 export default {
   playTrack,
   pauseTrack,
@@ -16,4 +16,6 @@ export default {
   setDuration,
   setActiveTrack,
   loadTracks,
+  openModal,
+  closeModal,
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/ui/navbar";
 import Player from "../components/ui/player";
+import TrackModalModule from "../components/ui/track-modal";
 interface LayoutInterface {
   children: React.ReactNode;
 }
