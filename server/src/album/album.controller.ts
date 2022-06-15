@@ -18,13 +18,8 @@ import { FileFieldsInterceptor } from '@nestjs/platform-express';
 export class AlbumController {
   constructor(private albumService: AlbumService) {}
   @Post()
-  @UseInterceptors(
-    FileFieldsInterceptor([
-      { name: 'image', maxCount: 1 },
-      { name: 'audio', maxCount: 1 },
-    ]),
-  )
-  create(@UploadedFiles() files, @Body() dto: CreateAlbumDto) {
+  @UseInterceptors(FileFieldsInterceptor([{ name: 'image', maxCount: 1 }]))
+  create(@Body() dto: CreateAlbumDto, @UploadedFiles() files) {
     const { image } = files;
     return this.albumService.create(dto, image[0]);
   }
@@ -44,8 +39,4 @@ export class AlbumController {
   delete(@Param('id') id: ObjectId) {
     return this.albumService.delete(id);
   }
-  // @Post('/comment')
-  // addComment(@Body() dto: CreateCommentDto) {
-  //   return this.albumService.addComment(dto);
-  // }
 }

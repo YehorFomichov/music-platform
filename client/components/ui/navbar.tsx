@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import styles from "./navbar.module.css";
+import Link from "next/link";
+import styles from "./navbar.module.scss";
 interface NavbarType {
   showNavBar: boolean;
   onToggleNavbar: () => void;
@@ -37,7 +38,7 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
               <li className={styles.menuNavItem}>
                 <a className={styles.menuNavLink} href="/login">
                   <span>
-                    <div>Sign-in</div>
+                    <div>Login</div>
                   </span>
                 </a>
               </li>

@@ -38,12 +38,6 @@ export class AlbumService {
     const album = await this.albumModel.findByIdAndDelete(id);
     return album._id;
   }
-  // async addTrack(dto: CreateCommentDto): Promise<Comment> {
-  //   const track = await this.trackModel.findById(dto.trackId);
-  //   const comment = await this.commentModel.create({ ...dto });
-  //   await track.save();
-  //   return comment;
-  // }
   async search(query: string): Promise<Album[]> {
     const albums = await this.albumModel.find({
       name: { $regex: new RegExp(query, 'i') },
