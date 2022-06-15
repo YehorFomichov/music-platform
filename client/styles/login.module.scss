@@ -1,9 +1,10 @@
 .login_container {
   margin-top: 3.6rem;
   width: 100vw;
-  height: 90vh;
+  height: 91.4vh;
+  top:0;
   position: absolute;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem 2rem 0 2rem;
+  margin: 2rem 1.5rem 0 1.5rem;
   border-radius: 20px;
   background-color: var(--dark-blue);
 
@@ -28,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 2rem 2rem 2rem;
+  margin: 1rem 1.5rem 2rem 1.5rem;
   border-radius: 20px;
   background-color: var(--grey);
   span {
@@ -42,7 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 2rem 2rem 2rem;
+  margin: 1rem 1.5rem 2rem 1.5rem;
   border-radius: 20px;
   background-color: var(--yellow);
   span {

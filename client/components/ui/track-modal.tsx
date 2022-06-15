@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import styles from "./track-modal.module.scss";
 import { ITrack } from "../../types/track";
-import Slider from "../common/slider";
 const path = "http://localhost:5000/";
 
 interface TrackModalProps {
@@ -11,6 +10,9 @@ interface TrackModalProps {
   duration: number;
   onOpenModal: () => void;
   averageColor: string;
+  onChangeCurrentTime: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onPlay: () => void;
+  pause: boolean;
 }
 
 const TrackModal: React.FC<TrackModalProps> = ({
@@ -20,7 +22,24 @@ const TrackModal: React.FC<TrackModalProps> = ({
   duration,
   onOpenModal,
   averageColor,
+  onChangeCurrentTime,
+  onPlay,
+  pause,
 }) => {
+  const rangeRef = useRef<HTMLDivElement | null>(null);
+  const getPercent = useCallback(() => {
+    const res = (currentTime / duration) * 100;
+    return Math.round(res);
+  }, [currentTime]);
+  useEffect(() => {
+    if (rangeRef.current) {
+      rangeRef.current.style.width = `${getPercent()}%`;
+    }
+  }, [currentTime]);
+  const getHumanReadableTime = (seconds) =>
+    seconds > 3600
+      ? new Date(seconds * 1000).toISOString().substring(11, 16)
+      : new Date(seconds * 1000).toISOString().substring(14, 19);
   if (!active || !isOpen) return null;
   return (
     <aside className={styles.wrap}>
@@ -44,16 +63,49 @@ const TrackModal: React.FC<TrackModalProps> = ({
         <div className={styles.buttons_wrapper}>
           <div>
             <div className={styles.slider}>
-              <input type="range" />
-              <div className={styles.slider_track}></div>
+              <input
+                type="range"
+                className={styles.thumb}
+                value={currentTime}
+                max={duration}
+                onChange={onChangeCurrentTime}
+              />
+              <div ref={rangeRef} className={styles.slider_track}></div>
               <div className={styles.slider_range}></div>
             </div>
             <div className={styles.duration}>
-              <p>{currentTime}</p>
-              <p>{duration}</p>
+              <p>{getHumanReadableTime(currentTime)}</p>
+              <p>{getHumanReadableTime(duration)}</p>
+            </div>
+            <div className={styles.buttons}>
+              <button className={styles.btn_heart}>
+                <i className="bi bi-heart"></i>
+              </button>
+              <button className={styles.btn_backward}>
+                <i className="bi bi-skip-backward"></i>
+              </button>
+              {!pause ? (
+                <button className={styles.btn_play} onClick={onPlay}>
+                  <i className="bi bi-pause-circle-fill"></i>
+                </button>
+              ) : (
+                <button className={styles.btn_play} onClick={onPlay}>
+                  <i className="bi bi-play-circle-fill"></i>
+                </button>
+              )}
+              <button className={styles.btn_forward}>
+                <i className="bi bi-skip-forward"></i>
+              </button>
+              <button className={styles.btn_shuffle}>
+                <i className="bi bi-shuffle"></i>
+              </button>
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.return} onClick={onOpenModal}>
+        <i className="bi bi-caret-down"></i>
+        <span>{active.name}</span>
       </div>
     </aside>
   );

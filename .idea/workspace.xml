@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="" />
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/sign-up.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/player.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/main-page.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/main-page.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/login.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/login.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/someStyles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/someStyles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/utils/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/firebase.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.service.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +31,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="29NkTYxDawhZQRFM8XKqYDPdccZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -24,13 +43,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/music-platform/server/src/album&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/music-platform&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\server\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -42,6 +61,32 @@
       <recent name="C:\Users\Yehor\Documents\music-platform\client\components\ui" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\styles" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.Start Client">
+    <configuration name="Start Client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/server/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.Start Client" />
+      <item itemvalue="npm.Start Server" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -63,11 +108,26 @@
       <workItem from="1653896286160" duration="22066000" />
       <workItem from="1653982957359" duration="18023000" />
       <workItem from="1654075412568" duration="8724000" />
-      <workItem from="1654092876972" duration="5397000" />
+      <workItem from="1654092876972" duration="6717000" />
+      <workItem from="1654162959704" duration="8903000" />
+      <workItem from="1654848190768" duration="427000" />
+      <workItem from="1655193068060" duration="11667000" />
+      <workItem from="1655271337527" duration="5473000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

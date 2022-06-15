@@ -8,6 +8,8 @@ const Login = () => {
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     const userDocRef = await createUserDocumentFromAuth(user);
+    console.log("user", user);
+    console.log("userDocRef", userDocRef);
   };
   return (
     <div className={styles.login_container}>
@@ -50,7 +52,7 @@ const Login = () => {
             />
           </div>
           <div className={styles.form_check}>
-            <input type="checkbox" id="exampleCheck1" />
+            <input type="checkbox" id="exampleCheck1" checked={true} />
             <label className={styles.form_check_label} htmlFor="stayOn">
               Remember me?
             </label>
@@ -58,6 +60,10 @@ const Login = () => {
           <div className={styles.login_button}>
             <span>Login</span>
           </div>
+          <span>
+            {`Don't have account? `}
+            <a href="/sign-up">SignUP</a>
+          </span>
         </form>
       </div>
     </div>

@@ -1,14 +1,28 @@
 import React from "react";
-import styles from "./main-page.module.css";
-
+import styles from "./main-page.module.scss";
+const array = [1, 2, 3, 4, 5, 6];
 const MainPage = () => {
   return (
-    <>
-      <div className={styles.container}>
-        <h1>Welcome</h1>
-        <h3>Here we have all the best tracks</h3>
-      </div>
-    </>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Relaxing</h2>
+      <ul className={styles.carousel_container}>
+        {array.map((e) => (
+          <li key={e}>
+            <div className={styles.card_figure}>
+              <div className={styles.card_figure_image}>
+                <img
+                  aria-hidden="false"
+                  draggable="false"
+                  loading="lazy"
+                  src="https://lite-images-i.scdn.co/image/ab67706f000000028f6675edec5c63b6dc995858"
+                />
+              </div>
+              <figcaption>Title of album</figcaption>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

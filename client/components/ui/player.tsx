@@ -107,7 +107,10 @@ const Player = () => {
         duration={duration}
         currentTime={currentTime}
         onOpenModal={openModal}
+        onChangeCurrentTime={changeCurrentTime}
         averageColor={`${aC[0]}, ${aC[1]}, ${aC[2]}`}
+        onPlay={play}
+        pause={pause}
       />
     </>
   );

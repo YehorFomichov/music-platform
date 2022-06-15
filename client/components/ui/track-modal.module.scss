@@ -1,5 +1,5 @@
 .wrap {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: black;
   position: absolute;
@@ -7,6 +7,29 @@
   top:0;
   left: 0;
   color: var(--white);
+}
+.return {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  i {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.91);
+    margin-right: 2rem;
+  }
+  span {
+    left:0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
 }
 .header {
   box-sizing: border-box;
@@ -78,10 +101,6 @@
 .slider {
   position: relative;
   width: 100%;
-  input {
-    width: 100%;
-    display: none;
-  }
 }
 .slider_track,
 .slider_range {
@@ -94,17 +113,98 @@
 }
 .slider_track {
   background-color: var(--white);
-  width: 100%;
-  z-index: 1;
+  width: 1%;
+  z-index: 3;
 }
 .duration {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 1rem;
   p {
     padding: 0;
+    margin-top: 0.5rem;
     font-weight: 150;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1.5rem;
   }
+}
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  outline: none;
+}
+.thumb::-webkit-slider-thumb {
+  background-color: var(--white);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+  z-index: 4;
+}
+
+.thumb::-moz-range-thumb {
+  background-color: #f1f5f7;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin-top: 4px;
+  pointer-events: all;
+  position: relative;
+}
+@mixin btnInit {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn_heart {
+  @include btnInit;
+  font-size: 1.7rem;
+  padding-right: 2rem;
+}
+.btn_backward {
+  @include btnInit;
+  font-size: 1.5rem;
+  color: #a1a1a1;
+}
+.btn_play {
+  @include btnInit;
+  font-size: 5rem;
+
+}
+.btn_forward {
+  @include btnInit;
+  font-size: 1.5rem;
+  color: #a1a1a1;
+}
+.btn_shuffle {
+  @include btnInit;
+  font-size: 1.5rem;
+  padding-left: 2rem;
 }
