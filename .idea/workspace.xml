@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Albums model">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/sign-up.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +49,7 @@
       <recent name="C:\Users\Yehor\Documents\music-platform\client\styles" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Start Server">
+  <component name="RunManager" selected="npm.Start Client">
     <configuration name="Start Client" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -115,6 +117,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
