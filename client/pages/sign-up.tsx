@@ -22,7 +22,11 @@ const SignUp = () => {
     <div className={styles.login_container}>
       <div
         className="container-fluid position-absolute"
+<<<<<<< HEAD
         style={{ backgroundColor: "white", maxWidth: "720px" }}
+=======
+        style={{ backgroundColor: "white" }}
+>>>>>>> origin/main
       >
         <form
           onSubmit={(event) => {
