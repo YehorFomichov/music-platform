@@ -5,6 +5,7 @@ interface FileUploadProps {
   accept: string;
   name: string;
   children: React.ReactNode;
+  className?: string;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({
@@ -12,6 +13,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   accept,
   name,
   children,
+  className,
 }) => {
   const ref = useRef<HTMLInputElement>();
   const handleUploadFile = () => {
@@ -21,7 +23,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
     setFile({ name: target.name, value: target.files[0] });
   };
   return (
-    <div onClick={handleUploadFile}>
+    <div onClick={handleUploadFile} className={className}>
       <input
         ref={ref}
         name={name}

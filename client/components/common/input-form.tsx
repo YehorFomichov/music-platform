@@ -11,7 +11,7 @@ interface TextFieldProps {
   name: string;
   value: string;
   onChange: (data: DataProps) => void;
-  error: string;
+  error?: string;
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -34,7 +34,7 @@ const TextField: React.FC<TextFieldProps> = ({
     setShowPassword((prevState) => !prevState);
   };
   return (
-    <div className="mb-1">
+    <div className="mb-1 d-inline">
       <label htmlFor={name}>{label}</label>
       <div className="input-group has-validation">
         <input

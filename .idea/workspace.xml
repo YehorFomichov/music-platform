@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Albums model">
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Created a genres model and tied model together">
+      <change afterPath="$PROJECT_DIR$/client/components/common/selectField.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/pages/upload-album.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/pages/upload-track-page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/upload-album.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/service/albumService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/styles/upload-album.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/types/albums.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/genres.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/user.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/genres/dto/create-genre.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/genres/genres.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/genres/genres.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/genres/genres.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/user/dto/create-user.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/user/user.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/user/user.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/user/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/sign-up.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/common/file-upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/file-upload.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/common/input-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/input-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/upload-page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/upload-album.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/upload-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/upload-track-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload-track.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/album.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/album.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/track.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/track.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/album.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/dto/create-album.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/dto/create-album.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/dto/create-comment.dto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/track.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/track.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/track.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/track.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,21 +62,26 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/music-platform&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/music-platform/client/components/common&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\server\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yehor\Documents\music-platform\client\components\common" />
+      <recent name="C:\Users\Yehor\Documents\music-platform\server\models" />
+      <recent name="C:\Users\Yehor\Documents\music-platform\server\src\genres" />
+      <recent name="C:\Users\Yehor\Documents\music-platform\server\src\user" />
       <recent name="C:\Users\Yehor\Documents\music-platform\server\src\album" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yehor\Documents\music-platform" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\components\ui" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\styles" />
     </key>
@@ -104,6 +141,14 @@
       <workItem from="1655358893890" duration="4535000" />
       <workItem from="1655456172230" duration="1198000" />
       <workItem from="1655626793380" duration="4848000" />
+      <workItem from="1655709064202" duration="525000" />
+      <workItem from="1655710211664" duration="4987000" />
+      <workItem from="1655734378177" duration="1126000" />
+      <workItem from="1655793926290" duration="5684000" />
+      <workItem from="1655976514927" duration="17791000" />
+      <workItem from="1656047565052" duration="2511000" />
+      <workItem from="1656139763609" duration="7557000" />
+      <workItem from="1656175781191" duration="4344000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -141,6 +186,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created sign up page, login page, updated main page and added albums service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created sign up page, login page, updated main page and added albums service" />
+    <MESSAGE value="Created a genres model and tied model together" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a genres model and tied model together" />
   </component>
 </project>

@@ -20,7 +20,7 @@ interface DataInterface {
   artist: DataInterfaceElement;
 }
 
-const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
+const UploadTrackPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
   const router = useRouter();
   const [data, setData] = useState({
     name: "",
@@ -165,4 +165,4 @@ const UploadPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
   return <div></div>;
 };
 
-export default UploadPage;
+export default UploadTrackPage;

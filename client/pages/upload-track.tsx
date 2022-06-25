@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ProgressBar from "../components/ui/progress-bar";
-import UploadPage from "../components/pages/upload-page";
+import UploadTrackPage from "../components/pages/upload-track-page";
 
-const Upload = () => {
+const UploadTrack = () => {
   const [step, setStep] = useState(1);
   const handleChangeStep = (action: string): void => {
     if (action === "previous") {
@@ -19,11 +19,11 @@ const Upload = () => {
       <div className="row">
         <div className="col-md-6 shadow p-4 w-100">
           <ProgressBar step={step} />
-          <UploadPage step={step} onChangeStep={handleChangeStep} />
+          <UploadTrackPage step={step} onChangeStep={handleChangeStep} />
         </div>
       </div>
     </div>
   );
 };
 
-export default Upload;
+export default UploadTrack;

@@ -5,6 +5,7 @@ import { FileModule } from './file/file.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import * as path from 'path';
 import { AlbumModule } from './album/album.module';
+import { GenresModule } from './genres/genres.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { AlbumModule } from './album/album.module';
     }),
     TrackModule,
     AlbumModule,
+    GenresModule,
     MongooseModule.forRoot(
       'mongodb+srv://MP-2022:eeETb2nCwFMdg15i@cluster0.cllzv.mongodb.net/music-platform?retryWrites=true&w=majority',
     ),
