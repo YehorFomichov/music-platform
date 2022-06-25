@@ -1,24 +1,27 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, ObjectId } from 'mongoose';
 import { Album, AlbumDocument } from '../../models/album.schema';
 import { CreateAlbumDto } from './dto/create-album.dto';
 import { FileService, FileType } from '../file/file.service';
+import { GenresService } from '../genres/genres.service';
 
 @Injectable()
 export class AlbumService {
+  @Inject(GenresService)
+  private readonly genresService: GenresService;
   constructor(
     @InjectModel(Album.name) private albumModel: Model<AlbumDocument>,
     private fileService: FileService,
   ) {}
-  async create(dto: CreateAlbumDto, image): Promise<Album> {
+  async create(dto: CreateAlbumDto, image): Promise<Album | void> {
     const imagePath = this.fileService.createFile(FileType.IMAGE, image);
-    const track = await this.albumModel.create({
+    const album = await this.albumModel.create({
       ...dto,
-      listens: 0,
       image: imagePath,
     });
-    return track;
+    await this.genresService.addAlbumToGenre(dto.genre, album.id);
+    return album;
   }
 
   async getAll(count = 10, offset = 0): Promise<Album[]> {
@@ -44,4 +47,17 @@ export class AlbumService {
     });
     return albums;
   }
+  async addTrackToAlbum(id: ObjectId, trackId): Promise<Album> {
+    const album = await this.albumModel.findById(id);
+    album.tracks.push(trackId);
+    await album.save();
+    return album;
+  }
+  // async addAlbumToGenre(dto: AddToGenreDto): Promise<Genres> {
+  //   const track = await this.G.findById(dto.trackId);
+  //   const comment = await this.commentModel.create({ ...dto });
+  //   track.comments.push(comment._id);
+  //   await track.save();
+  //   return comment;
+  // }
 }
