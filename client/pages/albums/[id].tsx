@@ -1,37 +1,39 @@
 import React, { useEffect, useState } from "react";
-import { useActions } from "../../hooks/useActions";
 import { useRouter } from "next/router";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { average } from "color.js";
 import styles from "../../components/pages/tracks-page.module.scss";
 import TrackItem from "../../components/ui/track-item";
+import albumService from "../../service/albumService";
 
 const Index = () => {
   const router = useRouter();
-  const count = 10;
-  const { loadTracks } = useActions();
-  const [pageOffset, setPageOffset] = useState();
+  const { id } = router.query;
+  const [album, setAlbum] = useState(null);
+  const loadAlbum = async () => {
+    const res = await albumService.getAlbumById(id);
+    setAlbum(res);
+  };
   useEffect(() => {
-    loadTracks(count, pageOffset);
-  }, [pageOffset]);
+    if (router.query?.id) {
+      loadAlbum();
+    }
+  }, [router]);
+  useEffect(() => {
+    getAverageColor();
+  }, [album]);
   const [aC, setAC] = useState([0, 0, 0]);
-  const { entities: tracks, isLoading } = useTypedSelector(
-    (state) => state.tracks
-  );
   const [play, setPlay] = useState("");
   const handlePlay = (id: string) => {
     setPlay(id);
   };
   const getAverageColor = async () => {
-    const color = await average(
-      "https://i.scdn.co/image/ab67706f0000000350e3e91b7010bcce06459a10"
-    );
+    if (!album) return;
+    const color = await average(`http://localhost:5000/${album.image}`);
     // @ts-ignore
     setAC(color);
   };
-  useEffect(() => {
-    getAverageColor();
-  }, []);
+  if (!album) return <h2>Loading...</h2>;
   return (
     <>
       <div
@@ -44,19 +46,17 @@ const Index = () => {
           <img
             draggable={false}
             className={styles.header_image}
-            src={
-              "https://i.scdn.co/image/ab67706f0000000350e3e91b7010bcce06459a10"
-            }
+            src={`http://localhost:5000/${album.image}`}
           />
         </div>
-        <h1>Album name</h1>
+        <h1>{album.name}</h1>
         <div className={styles.header_about}>
-          <p>Album description</p>
+          <p>{album.artist}</p>
         </div>
       </div>
       <div className={styles.tracks_list_container}>
-        {!isLoading &&
-          tracks.map((track, index) => (
+        {album?.tracks &&
+          album.tracks.map((track, index) => (
             <TrackItem
               key={track._id}
               track={track}
