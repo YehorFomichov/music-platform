@@ -3,6 +3,7 @@ import styles from "../components/pages/main-page.module.scss";
 import router from "next/router";
 import albumService from "../service/albumService";
 import { IAlbum } from "../types/albums";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [albums, setAlbums] = useState<IAlbum[] | null>(null);

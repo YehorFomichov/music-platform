@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import styles from "../styles/login.module.scss";
+import {
+  createAuthUserWithEmailAndPassword,
+  createUserDocumentFromAuth,
+} from "../utils/firebase.utils";
 
 const SignUp = () => {
   const [data, setData] = useState({
@@ -8,14 +12,36 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const resetForm = () => {
+    setData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+    });
+  };
   const handleChange = (e) => {
     setData((prevState) => {
       return { ...prevState, [e.target.id]: e.target.value };
     });
   };
 
-  function submitForm() {
-    console.log(data);
+  async function submitForm() {
+    try {
+      const { user } = await createAuthUserWithEmailAndPassword(
+        data.email,
+        data.password
+      );
+      await createUserDocumentFromAuth(user, {
+        displayName: `${data.firstName} ${data.lastName}`,
+      });
+      resetForm();
+    } catch (e) {
+      if (e.code === "auth/email-already-in-use") {
+        alert("Cannot create user, email already in use");
+      }
+      console.log(e);
+    }
   }
 
   return (

@@ -17,7 +17,7 @@ const UploadTrack = () => {
     name: "",
     artist: "",
     image: null,
-    genre: null,
+    genre: "pop",
   });
   const handleChange = (target) => {
     setData((prevState) => ({
@@ -30,8 +30,7 @@ const UploadTrack = () => {
     Object.keys(data).forEach((el) => {
       formData.append(el, data[el]);
     });
-    const res = await albumService.uploadAlbum(formData);
-    console.log(res);
+    await albumService.uploadAlbum(formData);
     router.push("/upload-track");
   };
   const [preview, setPreview] = useState("");
@@ -87,7 +86,7 @@ const UploadTrack = () => {
             name={"genre"}
             onChange={handleChange}
             options={genreOptions}
-            defaultOption={genreOptions[0].name}
+            defaultOption={"Select genre"}
             value={data.genre}
           />
         </div>

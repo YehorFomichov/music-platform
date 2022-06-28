@@ -23,13 +23,15 @@ const TextForm: React.FC<TextFormProps> = ({
     <div className="py-3">
       <label htmlFor={name}>{label}</label>
       <div className="input-group">
-        <input
-          type="text"
+        <textarea
           id={name}
           name={name}
           value={value}
           onChange={handleChange}
           className="form-control"
+          rows={10}
+          cols={25}
+          style={{ resize: "none", minHeight: "40vh" }}
         />
       </div>
     </div>

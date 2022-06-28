@@ -5,9 +5,9 @@ import {
   setCurrentTime,
   setDuration,
   setVolume,
-} from "./playerSlice";
-import { loadTracks } from "./trackSlice";
-import { openModal, closeModal } from "./modalSlice";
+} from "../playerSlice";
+import { loadTracks } from "../trackSlice";
+import { openModal, closeModal } from "../modalSlice";
 export default {
   playTrack,
   pauseTrack,

@@ -1,15 +1,27 @@
-import React from "react";
-import {
-  createUserDocumentFromAuth,
-  signInWithGooglePopup,
-} from "../utils/firebase.utils";
+import React, { useState } from "react";
 import styles from "../styles/login.module.scss";
+import InputForm from "../components/common/input-form";
+import { useRouter } from "next/router";
+import { useUserActions } from "../hooks/useUserActions";
 const Login = () => {
-  const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    const userDocRef = await createUserDocumentFromAuth(user);
-    console.log("user", user);
-    console.log("userDocRef", userDocRef);
+  const router = useRouter();
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+  const { loginWithGoogle, loginWithEmail } = useUserActions();
+  const handleChange = (target) => {
+    setData((prevstate) => {
+      return { ...prevstate, [target.name]: target.value };
+    });
+  };
+  const logInWithEmail = async () => {
+    try {
+      await loginWithEmail(data.email, data.password);
+      await router.push("/");
+    } catch (e) {
+      console.log("Something went wrong");
+    }
   };
   return (
     <div className={styles.login_container}>
@@ -17,7 +29,7 @@ const Login = () => {
         className="container-fluid position-absolute"
         style={{ backgroundColor: "white", maxWidth: "720px" }}
       >
-        <div className={styles.google_button} onClick={logGoogleUser}>
+        <div className={styles.google_button} onClick={loginWithGoogle}>
           <span>Sign in with Google Account</span>
         </div>
         <div className={styles.facebook_button}>
@@ -26,51 +38,39 @@ const Login = () => {
         <hr className={styles.line} />
         <form>
           <div className={styles.form_container}>
-            <label htmlFor="email" className={styles.form_label}>
-              Email address
-            </label>
-            <input
-              type="email"
-              autoComplete={"off"}
-              className={styles.form_input}
-              placeholder="Please enter your email address"
-              id="login-username"
-              aria-describedby="emailHelp"
+            <InputForm
+              label={"Email"}
+              type={"email"}
+              name={"email"}
+              value={data.email}
+              onChange={handleChange}
             />
           </div>
           <div className={styles.form_container}>
-            <label
-              htmlFor="exampleInputPassword1"
-              className={styles.form_label}
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              className={styles.form_input}
-              id="login-password"
+            <InputForm
+              label={"Password"}
+              type={"password"}
+              name={"password"}
+              value={data.password}
+              onChange={handleChange}
             />
           </div>
           <div className={styles.form_check}>
-            <input type="checkbox" id="exampleCheck1" checked={true} />
+            <input type="checkbox" id="exampleCheck1" />
             <label className={styles.form_check_label} htmlFor="stayOn">
               Remember me?
             </label>
           </div>
-          <div className={styles.login_button}>
+          <div className={styles.login_button} onClick={logInWithEmail}>
             <span>Login</span>
           </div>
-          <span>
-            {`Don't have account? `}
-            <a href="/sign-up">SignUP</a>
-          </span>
         </form>
+
+        <span>
+          {`Don't have account? `}
+          <a href="/sign-up">SignUP</a>
+        </span>
       </div>
-    </div>
-  );
-  return (
-    <div className="text-white">
-      <button onClick={logGoogleUser}>Sign In With Google Popup</button>
     </div>
   );
 };

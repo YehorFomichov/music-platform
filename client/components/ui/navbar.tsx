@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import Link from "next/link";
 import styles from "./navbar.module.scss";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 interface NavbarType {
   showNavBar: boolean;
   onToggleNavbar: () => void;
 }
 const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
   const inputRef = useRef(null);
+  const { user } = useTypedSelector((state) => state.user);
   useEffect(() => {
     return () => {
       inputRef.current.checked = false;
@@ -36,23 +37,31 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
                 </a>
               </li>
               <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="/login">
+                {user ? (
+                  <a className={styles.menuNavLink} href="/profile">
+                    <span>
+                      <div>Profile</div>
+                    </span>
+                  </a>
+                ) : (
+                  <a className={styles.menuNavLink} href="/login">
+                    <span>
+                      <div>Login</div>
+                    </span>
+                  </a>
+                )}
+              </li>
+              <li className={styles.menuNavItem}>
+                <a className={styles.menuNavLink} href="/upload-album">
                   <span>
-                    <div>Login</div>
+                    <div>Albums</div>
                   </span>
                 </a>
               </li>
               <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="#">
+                <a className={styles.menuNavLink} href="/upload-track">
                   <span>
-                    <div>Service</div>
-                  </span>
-                </a>
-              </li>
-              <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="#">
-                  <span>
-                    <div>Team</div>
+                    <div>Upload</div>
                   </span>
                 </a>
               </li>
