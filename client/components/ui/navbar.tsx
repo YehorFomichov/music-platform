@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./navbar.module.scss";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
+import Link from "next/link";
 interface NavbarType {
   showNavBar: boolean;
   onToggleNavbar: () => void;
@@ -12,7 +13,7 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
     return () => {
       inputRef.current.checked = false;
     };
-  }, []);
+  });
   return (
     <div className={styles.container}>
       <input type="checkbox" id={styles.burgerToggle} ref={inputRef} />
@@ -30,40 +31,41 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
           <div className={styles.menuInner}>
             <ul className={styles.menuNav}>
               <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="/">
-                  <span>
-                    <div>Home</div>
-                  </span>
-                </a>
+                <Link href="/">
+                  <a className={styles.menuNavLink} onClick={onToggleNavbar}>
+                    <span>
+                      <div>Home</div>
+                    </span>
+                  </a>
+                </Link>
               </li>
               <li className={styles.menuNavItem}>
                 {user ? (
-                  <a className={styles.menuNavLink} href="/profile">
-                    <span>
-                      <div>Profile</div>
-                    </span>
-                  </a>
+                  <Link href="/profile">
+                    <a className={styles.menuNavLink} onClick={onToggleNavbar}>
+                      <span>
+                        <div>Profile</div>
+                      </span>
+                    </a>
+                  </Link>
                 ) : (
-                  <a className={styles.menuNavLink} href="/login">
-                    <span>
-                      <div>Login</div>
-                    </span>
-                  </a>
+                  <Link href="/login">
+                    <a className={styles.menuNavLink} onClick={onToggleNavbar}>
+                      <span>
+                        <div>Login</div>
+                      </span>
+                    </a>
+                  </Link>
                 )}
               </li>
               <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="/upload-album">
-                  <span>
-                    <div>Albums</div>
-                  </span>
-                </a>
-              </li>
-              <li className={styles.menuNavItem}>
-                <a className={styles.menuNavLink} href="/upload-track">
-                  <span>
-                    <div>Upload</div>
-                  </span>
-                </a>
+                <Link href="/upload-track">
+                  <a className={styles.menuNavLink} onClick={onToggleNavbar}>
+                    <span>
+                      <div>Upload</div>
+                    </span>
+                  </a>
+                </Link>
               </li>
             </ul>
             <div className={styles.gallery}>
@@ -71,38 +73,38 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
                 <p>Categories</p>
               </div>
               <div className={styles.images}>
-                <a className={styles.imageLink} href="/tracks">
+                <Link className={styles.imageLink} href="/tracks">
                   <div className={styles.image} data-label="Tracks">
                     <img
                       src="https://unsplash.com/photos/RQ0_Fp2Hr2M/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8bXVzaWN8ZW58MHwxfHx8MTY1MjcwNzg1MQ&force=true&w=640"
                       alt=""
                     />
                   </div>
-                </a>
-                <a className={styles.imageLink} href="/albums">
+                </Link>
+                <Link className={styles.imageLink} href="/albums">
                   <div className={styles.image} data-label="Albums">
                     <img
                       src="https://unsplash.com/photos/3hWg9QKl5k8/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8bXVzaWN8ZW58MHwxfHx8MTY1MjcwNzg1MQ&force=true&w=640"
                       alt=""
                     />
                   </div>
-                </a>
-                <a className={styles.imageLink} href="/genres">
+                </Link>
+                <Link className={styles.imageLink} href="/genres">
                   <div className={styles.image} data-label="Genres">
                     <img
                       src="https://unsplash.com/photos/laHwVPkMTzY/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8bXVzaWMlMjBnZW5yZXN8ZW58MHwxfHx8MTY1MjcxNzE1OQ&force=true&w=640"
                       alt=""
                     />
                   </div>
-                </a>
-                <a className={styles.imageLink} href="/favorites">
+                </Link>
+                <Link className={styles.imageLink} href="/favorites">
                   <div className={styles.image} data-label="Favorites">
                     <img
                       src="https://unsplash.com/photos/QVnw_3l_n0Y/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTB8fG11c2ljJTIwZ2VucmVzfGVufDB8MXx8fDE2NTI3MTcxNTk&force=true&w=640"
                       alt=""
                     />
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

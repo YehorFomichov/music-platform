@@ -3,6 +3,7 @@ import styles from "../styles/login.module.scss";
 import InputForm from "../components/common/input-form";
 import { useRouter } from "next/router";
 import { useUserActions } from "../hooks/useUserActions";
+import Link from "next/link";
 const Login = () => {
   const router = useRouter();
   const [data, setData] = useState({
@@ -68,7 +69,7 @@ const Login = () => {
 
         <span>
           {`Don't have account? `}
-          <a href="/sign-up">SignUP</a>
+          <Link href="/sign-up">SignUP</Link>
         </span>
       </div>
     </div>

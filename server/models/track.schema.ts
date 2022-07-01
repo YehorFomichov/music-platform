@@ -20,6 +20,9 @@ export class Track {
 
   @Prop()
   audio: string;
+
+  @Prop()
+  genre: string;
 }
 
 export const TrackSchema = SchemaFactory.createForClass(Track);

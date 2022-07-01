@@ -20,9 +20,9 @@ const TextForm: React.FC<TextFormProps> = ({
     onChange({ name: target.name, value: target.value });
   };
   return (
-    <div className="py-3">
+    <div className="py-3 mx-3">
       <label htmlFor={name}>{label}</label>
-      <div className="input-group">
+      <div className="input-group my-2">
         <textarea
           id={name}
           name={name}

@@ -3,5 +3,7 @@ export class CreateTrackDto {
   readonly name: string;
   readonly artist: string;
   readonly lyrics: string;
-  readonly album: ObjectId;
+  readonly albumID: ObjectId;
+  readonly album: string;
+  readonly genre: string;
 }

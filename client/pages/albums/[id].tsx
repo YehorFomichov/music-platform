@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { average } from "color.js";
 import styles from "../../components/pages/tracks-page.module.scss";
 import TrackItem from "../../components/ui/track-item";

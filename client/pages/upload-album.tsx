@@ -47,7 +47,7 @@ const UploadTrack = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <h1>
-          Step 1: <b>Upload Album/EP</b>
+          <b>Upload Album</b> / <b>Upload Track</b>
         </h1>
       </div>
       <ProgressBar step={1} />

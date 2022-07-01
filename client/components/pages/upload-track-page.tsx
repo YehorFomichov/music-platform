@@ -31,12 +31,10 @@ const UploadTrackPage: React.FC<UploadPageProps> = ({ step, onChangeStep }) => {
   });
   const [errors, setErrors] = useState({});
   const handleChange = (target) => {
-    console.log(target);
     setData((prevState) => ({
       ...prevState,
       [target.name]: target.value,
     }));
-    console.log(data);
   };
   const validatorConfig = {
     track: {

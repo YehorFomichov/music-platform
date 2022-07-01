@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Client-side album rendering">
-      <change afterPath="$PROJECT_DIR$/client/hooks/useUserActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/service/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/service/localStorage.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/actionCreators/userActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/userSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2022_12_35_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_06_2022_12_35__Changes_.xml" beforeDir="false" />
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Upload page, docker">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/upload.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/styles/upload.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/common/file-upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/file-upload.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/common/text-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/text-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/upload-track-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/upload-track-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/hooks/useActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/sign-up.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/upload-album.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload-album.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload-track.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload-track.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/service/httpService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/service/httpService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/actionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actionCreators/actionCreators.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/createStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/createStore.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/types/albums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/albums.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/firebase.utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/firebase.utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/upload-album.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload-album.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/track.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/track.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/track.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/track.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\server\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -138,7 +137,9 @@
       <workItem from="1656139763609" duration="7557000" />
       <workItem from="1656175781191" duration="6199000" />
       <workItem from="1656229184423" duration="28041000" />
-      <workItem from="1656408742706" duration="778000" />
+      <workItem from="1656408742706" duration="13004000" />
+      <workItem from="1656430455153" duration="7905000" />
+      <workItem from="1656498958178" duration="17725000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -175,7 +176,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656234992934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implemented auth">
+      <created>1656410351355</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1656410351355</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Localstorage bug fix">
+      <created>1656413530050</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656413530050</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +222,9 @@
     <MESSAGE value="Created a genres model and tied model together" />
     <MESSAGE value="Upload album form" />
     <MESSAGE value="Client-side album rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Client-side album rendering" />
+    <MESSAGE value="Implemented auth" />
+    <MESSAGE value="Localstorage bug fix" />
+    <MESSAGE value="Upload page, docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upload page, docker" />
   </component>
 </project>

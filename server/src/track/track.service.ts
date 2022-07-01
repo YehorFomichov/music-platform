@@ -23,7 +23,9 @@ export class TrackService {
       audio: audioPath,
       image: imagePath,
     });
-    await this.albumsService.addTrackToAlbum(dto.album, track._id);
+    if (dto.albumID) {
+      await this.albumsService.addTrackToAlbum(dto.albumID, track._id);
+    }
     return track;
   }
 

@@ -19,7 +19,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   const handleUploadFile = () => {
     ref.current.click();
   };
-  const handleChange = ({ target }) => {
+  const handleChange = ({ target }): void => {
     setFile({ name: target.name, value: target.files[0] });
   };
   return (

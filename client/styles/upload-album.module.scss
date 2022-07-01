@@ -1,9 +1,6 @@
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: 8vh auto;
   width: 80vw;
   background-color: #fefbf6;
   border-radius: 15px;
@@ -11,8 +8,12 @@
 .header {
   width: 100%;
   padding: 2% 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   h1 {
-    text-size: 1rem;
+    text-size: 0.5rem;
     line-height: 100%;
     text-align: center;
   }
@@ -25,7 +26,6 @@
 }
 .image_container {
   background-color: #535353;
-  //overflow: hidden;
   -webkit-box-shadow: 4px 4px 16px 1px rgba(84, 84, 84, 0.78);
   box-shadow: 4px 4px 16px 1px rgba(73, 73, 73, 0.78);
   border-radius: 10px;
@@ -84,4 +84,40 @@
   &:hover {
     background: rgb(230, 126, 34)
   }
+}
+.lyrics_btn {
+  border: 1px solid rgb(230, 126, 34);
+  background: none;
+  //padding: 12px;
+  border-radius: 4px;
+  margin: 12px;
+  min-width: 140px;
+  &:hover {
+    background: rgb(230, 126, 34)
+  }
+}
+.upload_type_select {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12vh;
+  div:hover {
+    border: 1px solid #ea7814;
+    background-color: rgba(234, 120, 20, 0.27);
+  }
+  div {
+    box-sizing: border-box;
+    width: 50%;
+    margin: 0 5%;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    h2 {
+      line-height: 100%;
+      text-align: center;
+    }
+  }
+}
+.progress_bar_container {
+  margin: 8vh auto;
+  padding: 2vh
 }
