@@ -44,6 +44,7 @@ const TextField: React.FC<TextFieldProps> = ({
           value={value}
           onChange={handleChange}
           className={getInputClasses()}
+          style={{ backgroundColor: "#333", color: "white", border: "none" }}
         />
         {type === "password" && (
           <button

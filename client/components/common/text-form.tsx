@@ -31,7 +31,14 @@ const TextForm: React.FC<TextFormProps> = ({
           className="form-control"
           rows={10}
           cols={25}
-          style={{ resize: "none", minHeight: "40vh" }}
+          style={{
+            backgroundColor: "#333",
+            color: "white",
+            border: "none",
+            resize: "none",
+            minHeight: "40vh",
+            width: "80%",
+          }}
         />
       </div>
     </div>

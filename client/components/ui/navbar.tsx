@@ -13,14 +13,18 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
     return () => {
       inputRef.current.checked = false;
     };
-  });
+  }, [inputRef]);
+  const toggleNavbar = () => {
+    onToggleNavbar();
+    inputRef.current.checked = false;
+  };
   return (
     <div className={styles.container}>
       <input type="checkbox" id={styles.burgerToggle} ref={inputRef} />
       <label
         htmlFor={styles.burgerToggle}
         className={styles.burgerMenu}
-        onClick={onToggleNavbar}
+        onClick={toggleNavbar}
       >
         <div className={styles.line}></div>
         <div className={styles.line}></div>
@@ -59,7 +63,7 @@ const Navbar: React.FC<NavbarType> = ({ showNavBar, onToggleNavbar }) => {
                 )}
               </li>
               <li className={styles.menuNavItem}>
-                <Link href="/upload-track">
+                <Link href="/upload">
                   <a className={styles.menuNavLink} onClick={onToggleNavbar}>
                     <span>
                       <div>Upload</div>

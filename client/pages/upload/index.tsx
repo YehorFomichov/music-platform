@@ -1,36 +1,37 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
+import styles from "../../styles/upload.module.scss";
 import { useRouter } from "next/router";
-import styles from "../styles/upload.module.scss";
-import ProgressBar from "../components/ui/progress-bar";
 interface FormDataInterface {
   type: "album" | "track";
 }
-const UploadTrack = () => {
-  const [data, setData] = useState<FormDataInterface>({
+const Upload = () => {
+  const history = useRouter();
+  const [typeOfUpload, setTypeOfUpload] = useState<FormDataInterface>({
     type: "track",
   });
-  const handleChangeType = (type: FormDataInterface["type"]): void => {
-    setData((prevState) => {
+  const handleChangeUploadType = (type: FormDataInterface["type"]): void => {
+    setTypeOfUpload((prevState) => {
       return { ...prevState, type };
     });
   };
-  const router = useRouter();
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
+      <header className={styles.header}>
         <h1>Please select your upload type:</h1>
-      </div>
-      <div className={styles.upload_type_container}>
+      </header>
+      <main className={styles.upload_type_container}>
         <div
           className={
-            data.type === "album"
+            typeOfUpload.type === "album"
               ? styles.upload_type_select_checked
               : styles.upload_type_select
           }
-          onClick={() => handleChangeType("album")}
+          onClick={() => handleChangeUploadType("album")}
         >
           <input type="radio" id="album" name="fav_language" />
-          {data.type === "album" && <i className="bi bi-check2-circle h2"></i>}
+          {typeOfUpload.type === "album" && (
+            <i className="bi bi-check2-circle h2"></i>
+          )}
           <label htmlFor="album">
             <div className={styles.select_label}>
               <img src="http://localhost:3000/album.png" />
@@ -40,14 +41,14 @@ const UploadTrack = () => {
         </div>
         <div
           className={
-            data.type === "track"
+            typeOfUpload.type === "track"
               ? styles.upload_type_select_checked
               : styles.upload_type_select
           }
-          onClick={() => handleChangeType("track")}
+          onClick={() => handleChangeUploadType("track")}
         >
           <input type="radio" id="track" />
-          {data.type === "track" && (
+          {typeOfUpload.type === "track" && (
             <i className="bi bi-check2-circle h2 m-0 p-0"></i>
           )}
           <label htmlFor="track">
@@ -57,9 +58,21 @@ const UploadTrack = () => {
             <h2 className={styles.select_label_text}>Song</h2>
           </label>
         </div>
+      </main>
+      <footer className={styles.button_container}>
+        <button
+          className={styles.next_button}
+          onClick={() => history.push(`/upload/${typeOfUpload.type}`)}
+        >
+          Next step
+        </button>
+      </footer>
+      <div className={styles.info_container}>
+        <h4>Supported file types:</h4>
+        <h6>*.MP3, *.JPG</h6>
       </div>
     </div>
   );
 };
 
-export default UploadTrack;
+export default Upload;

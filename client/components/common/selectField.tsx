@@ -36,8 +36,8 @@ const SelectField: FC<SelectFieldProps> = ({
         className={getInputClasses()}
         id={name}
         name={name}
-        // value={value}
         onChange={handleChange}
+        style={{ backgroundColor: "#333", color: "white", border: "none" }}
       >
         <option disabled value="">
           {defaultOption}

@@ -1,0 +1,105 @@
+import React, { useEffect, useState } from "react";
+import InputForm from "../../components/common/input-form";
+import FileUpload from "../../components/common/file-upload";
+import { useRouter } from "next/router";
+import albumService from "../../service/albumService";
+import styles from "../../styles/upload-album.module.scss";
+import SelectField from "../../components/common/selectField";
+import ProgressBar from "../../components/ui/progress-bar";
+const genreOptions = [
+  { name: "Pop", value: "pop" },
+  { name: "Rock", value: "rock" },
+];
+
+const UploadAlbum = () => {
+  const router = useRouter();
+  const [data, setData] = useState({
+    name: "",
+    artist: "",
+    image: null,
+    genre: "pop",
+  });
+  const handleChange = (target) => {
+    setData((prevState) => ({
+      ...prevState,
+      [target.name]: target.value,
+    }));
+  };
+  const handleUpload = async () => {
+    const formData = new FormData();
+    Object.keys(data).forEach((el) => {
+      formData.append(el, data[el]);
+    });
+    await albumService.uploadAlbum(formData);
+    await router.push("/upload-track");
+  };
+  const [preview, setPreview] = useState("");
+  useEffect(() => {
+    if (!data.image) {
+      setPreview(undefined);
+      return;
+    }
+    const objectUrl = URL.createObjectURL(data.image);
+    setPreview(objectUrl);
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [data.image]);
+  return (
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1>
+          <b>Upload Your Music!</b>
+        </h1>
+        <ProgressBar step={1} />
+      </header>
+      <div className={styles.form_container}>
+        <section className={styles.section_container}>
+          <FileUpload
+            setFile={handleChange}
+            accept={"image/*"}
+            name="image"
+            className={styles.image_container}
+          >
+            {data.image ? (
+              <img alt="Image" src={preview} draggable={"false"} />
+            ) : (
+              <p>Upload Image</p>
+            )}
+          </FileUpload>
+          <div className={styles.inputs}>
+            <InputForm
+              label={"Album title"}
+              type={"text"}
+              name={"name"}
+              value={data.name}
+              onChange={handleChange}
+              error={null}
+            />
+            <InputForm
+              label={"Artist"}
+              type={"text"}
+              name={"artist"}
+              value={data.artist}
+              onChange={handleChange}
+              error={null}
+            />
+            <SelectField
+              label={"Select genre"}
+              name={"genre"}
+              onChange={handleChange}
+              options={genreOptions}
+              defaultOption={"Select genre"}
+              value={data.genre}
+            />
+          </div>
+        </section>
+        <div className={styles.buttons_container}>
+          <button className={styles.next_btn} onClick={handleUpload}>
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UploadAlbum;

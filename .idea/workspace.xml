@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Upload page, docker">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/upload.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/styles/upload.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/common/file-upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/file-upload.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/common/input-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/input-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/common/selectField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/selectField.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/common/text-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/text-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/pages/upload-track-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/upload-track-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload-album.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload-album.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload-track.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload-track.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/service/httpService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/service/httpService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload-album.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/album.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload-track.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/track.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/upload-album.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload-album.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/track.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/track.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/track/track.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/track.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/upload.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +39,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/fc-app/client&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/music-platform&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\server\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -67,6 +58,7 @@
       <recent name="C:\Users\Yehor\Documents\music-platform\server\src\album" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yehor\Documents\music-platform\client\pages\upload" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\store\actionCreators" />
       <recent name="C:\Users\Yehor\Documents\music-platform" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\components\ui" />
@@ -139,7 +131,9 @@
       <workItem from="1656229184423" duration="28041000" />
       <workItem from="1656408742706" duration="13004000" />
       <workItem from="1656430455153" duration="7905000" />
-      <workItem from="1656498958178" duration="17725000" />
+      <workItem from="1656498958178" duration="26515000" />
+      <workItem from="1657050569928" duration="3453000" />
+      <workItem from="1657094258825" duration="8048000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -190,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656413530050</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Upload page, docker">
+      <created>1656656721498</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656656721498</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
