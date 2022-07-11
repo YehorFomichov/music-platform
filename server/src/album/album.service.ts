@@ -36,7 +36,6 @@ export class AlbumService {
     const album = await this.albumModel.findById(id).populate('tracks');
     return album;
   }
-
   async delete(id: ObjectId): Promise<ObjectId> {
     const album = await this.albumModel.findByIdAndDelete(id);
     return album._id;

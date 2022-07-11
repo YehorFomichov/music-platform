@@ -23,6 +23,9 @@ export class Track {
 
   @Prop()
   genre: string;
+
+  @Prop()
+  userID: string;
 }
 
 export const TrackSchema = SchemaFactory.createForClass(Track);

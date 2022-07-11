@@ -6,7 +6,6 @@ import styles from "../../styles/upload-album.module.scss";
 import SelectField from "../../components/common/selectField";
 import TextForm from "../../components/common/text-form";
 import trackService from "../../service/tracksService";
-import ProgressBar from "../../components/ui/progress-bar";
 const genreOptions = [
   { name: "Pop", value: "pop" },
   { name: "Rock", value: "rock" },
@@ -99,7 +98,6 @@ const Track = () => {
               onChange={handleChange}
               error={null}
             />
-
             <SelectField
               label={"Select genre"}
               name={"genre"}

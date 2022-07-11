@@ -6,4 +6,5 @@ export class CreateTrackDto {
   readonly albumID: ObjectId;
   readonly album: string;
   readonly genre: string;
+  readonly userID: string;
 }

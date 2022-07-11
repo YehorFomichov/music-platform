@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Upload page, docker">
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Finished upload form for album upload">
+      <change afterPath="$PROJECT_DIR$/client/public/album.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/track.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/common/input-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/input-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/common/selectField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/selectField.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/common/text-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/text-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload-album.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/album.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload-track.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/track.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/player.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload/album.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/album.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload/track.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/track.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/upload-album.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload-album.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/upload.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/track.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/track.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/track.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/track.schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/dto/create-album.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/dto/create-album.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/file/file.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/file/file.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +68,7 @@
       <recent name="C:\Users\Yehor\Documents\music-platform\client\styles" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Start Client">
+  <component name="RunManager" selected="npm.Start Server">
     <configuration name="Start Client" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -133,7 +136,11 @@
       <workItem from="1656430455153" duration="7905000" />
       <workItem from="1656498958178" duration="26515000" />
       <workItem from="1657050569928" duration="3453000" />
-      <workItem from="1657094258825" duration="8048000" />
+      <workItem from="1657094258825" duration="12213000" />
+      <workItem from="1657176956755" duration="3748000" />
+      <workItem from="1657349437026" duration="8414000" />
+      <workItem from="1657466141849" duration="624000" />
+      <workItem from="1657521865240" duration="5258000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -191,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656656721498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Changed upload styles">
+      <created>1657126267287</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1657126267287</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +240,8 @@
     <MESSAGE value="Implemented auth" />
     <MESSAGE value="Localstorage bug fix" />
     <MESSAGE value="Upload page, docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload page, docker" />
+    <MESSAGE value="Changed upload styles" />
+    <MESSAGE value="Finished upload form for album upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished upload form for album upload" />
   </component>
 </project>

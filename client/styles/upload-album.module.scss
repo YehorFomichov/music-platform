@@ -122,3 +122,78 @@
   margin: 8vh auto;
   padding: 2vh
 }
+.track_container {
+  width: 100%;
+  border: #1c1c1c;
+  ul {
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  li {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+.track_header {
+  display: flex;
+  text-transform: capitalize;
+  color: #535353;
+  div {
+    box-sizing: border-box;
+    margin: 0 20px;
+  }
+  div:first-of-type {
+    margin: 0 20px 0 0;
+  }
+  div:last-of-type {
+    margin: 0 0 0 auto;
+  }
+}
+.track_element {
+  display: flex;
+  text-transform: capitalize;
+  color: #ffffff;
+  div {
+    box-sizing: border-box;
+    margin: 0 20px;
+  }
+  div:first-of-type {
+    margin: 0 20px 0 0;
+  }
+  div:last-of-type {
+    margin: 0 0 0 auto;
+    color: #e67e22;
+  }
+}
+.upload_box {
+  min-height: 20vh;
+  padding: 2% 5% 1% 5%;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0;
+  }
+  p {
+    text-align: center;
+  }
+  button {
+    border: 1px solid rgb(230, 126, 34);
+    background: none;
+    padding: 12px 28px;
+    border-radius: 24px;
+    min-width: 140px;
+    color: white;
+    &:hover {
+      background: rgb(230, 126, 34)
+    }
+  }
+}
+.track_edit {
+  width: 100%;
+  padding: 2% 2%;
+  border: 2px solid #535353;
+}
+.track_edit_header {
+  margin: 2% 0;
+}

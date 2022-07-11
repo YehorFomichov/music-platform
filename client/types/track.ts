@@ -12,5 +12,11 @@ export interface ITrack {
   audio: string;
   lyrics: string;
   listens: number;
-  comments: IComment[];
+}
+export interface ITrackUpload {
+  name: string;
+  artist: string;
+  audio: File;
+  lyrics: string;
+  modalOpen: boolean;
 }
