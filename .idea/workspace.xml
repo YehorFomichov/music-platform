@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Hydration bug fix">
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Implemented auto continue after ending of the song alongside previous and next buttons">
+      <change afterPath="$PROJECT_DIR$/client/pages/404.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/track-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/actionCreators/actionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actionCreators/actionCreators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/playerSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/playerSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/types/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/player.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +137,7 @@
       <workItem from="1657521865240" duration="5258000" />
       <workItem from="1657547382681" duration="5944000" />
       <workItem from="1657619198308" duration="12959000" />
-      <workItem from="1657695787728" duration="20143000" />
+      <workItem from="1657695787728" duration="26719000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -222,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657718104215</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implemented auto continue after ending of the song alongside previous and next buttons">
+      <created>1657729175296</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657729175296</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +269,7 @@
     <MESSAGE value="Finished upload form for album upload" />
     <MESSAGE value="Main page" />
     <MESSAGE value="Hydration bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hydration bug fix" />
+    <MESSAGE value="Implemented auto continue after ending of the song alongside previous and next buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented auto continue after ending of the song alongside previous and next buttons" />
   </component>
 </project>

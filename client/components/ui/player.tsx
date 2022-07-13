@@ -58,6 +58,10 @@ const Player = () => {
     audio.currentTime = Number(e.target.value);
     setCurrentTime(Number(e.target.value));
   };
+  const setTrackToTime = (time: number) => {
+    audio.currentTime = time;
+    setCurrentTime(time);
+  };
   useEffect(() => {
     if (!audio) {
       audio = new Audio();
@@ -121,6 +125,7 @@ const Player = () => {
         averageColor={`${aC[0]}, ${aC[1]}, ${aC[2]}`}
         onPlay={play}
         pause={pause}
+        setTrackToTime={setTrackToTime}
       />
     </>
   );

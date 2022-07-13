@@ -33,12 +33,12 @@ const playerSlice = createSlice({
     },
     SET_ACTIVE: (state, action) => {
       state.active = action.payload;
-      state.duration = 0;
+      state.duration = 15;
       state.currentTime = 0;
     },
     SET_ACTIVE_PLAYLIST: (state, action: PayloadAction<ITrack[]>) => {
       state.currentPlaylist = action.payload;
-      state.duration = 0;
+      state.duration = 15;
       state.currentTime = 0;
     },
     SET_ACTIVE_INDEX: (state, action: PayloadAction<number>) => {

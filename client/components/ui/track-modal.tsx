@@ -14,6 +14,7 @@ interface TrackModalProps {
   onChangeCurrentTime: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onPlay: () => void;
   pause: boolean;
+  setTrackToTime: (time: number) => void;
 }
 
 const TrackModal: React.FC<TrackModalProps> = ({
@@ -26,6 +27,7 @@ const TrackModal: React.FC<TrackModalProps> = ({
   onChangeCurrentTime,
   onPlay,
   pause,
+  setTrackToTime,
 }) => {
   const rangeRef = useRef<HTMLDivElement | null>(null);
   const { playPrevious, playNext } = useActions();
@@ -42,6 +44,11 @@ const TrackModal: React.FC<TrackModalProps> = ({
     seconds > 3600
       ? new Date(seconds * 1000).toISOString().substring(11, 16)
       : new Date(seconds * 1000).toISOString().substring(14, 19);
+  const setTime = (e) => {
+    let width = window.innerWidth;
+    const time = (+e.clientX - 16) / (width - 16 - width * (39 / 1035));
+    setTrackToTime(time * duration);
+  };
   if (!active || !isOpen) return null;
   return (
     <aside className={styles.wrap}>
@@ -72,8 +79,15 @@ const TrackModal: React.FC<TrackModalProps> = ({
                 max={duration}
                 onChange={onChangeCurrentTime}
               />
-              <div ref={rangeRef} className={styles.slider_track}></div>
-              <div className={styles.slider_range}></div>
+              <div
+                ref={rangeRef}
+                className={styles.slider_track}
+                onClick={(e) => setTime(e)}
+              ></div>
+              <div
+                className={styles.slider_range}
+                onClick={(e) => setTime(e)}
+              ></div>
             </div>
             <div className={styles.duration}>
               <p>{getHumanReadableTime(currentTime)}</p>
