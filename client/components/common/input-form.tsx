@@ -12,6 +12,7 @@ interface TextFieldProps {
   value: string;
   onChange: (data: DataProps) => void;
   error?: string;
+  white?: boolean;
 }
 
 const TextField: React.FC<TextFieldProps> = ({
@@ -21,6 +22,7 @@ const TextField: React.FC<TextFieldProps> = ({
   value,
   onChange,
   error,
+  white,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -44,7 +46,15 @@ const TextField: React.FC<TextFieldProps> = ({
           value={value}
           onChange={handleChange}
           className={getInputClasses()}
-          style={{ backgroundColor: "#333", color: "white", border: "none" }}
+          style={
+            white
+              ? {
+                  backgroundColor: "white",
+                  color: "black",
+                  border: "2px inset #eee",
+                }
+              : { backgroundColor: "#333", color: "white", border: "none" }
+          }
         />
         {type === "password" && (
           <button

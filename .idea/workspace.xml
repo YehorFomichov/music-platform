@@ -2,21 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Finished upload form for album upload">
-      <change afterPath="$PROJECT_DIR$/client/public/album.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/track.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/B.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/common/text-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/text-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/player.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload/album.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/album.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/upload/track.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/track.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/common/input-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/common/input-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/tracks-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/tracks-page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/main-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/main-layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/sign-up.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/login.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/login.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/styles/upload-album.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload-album.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/types/track.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/track.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/track.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/track.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/album/dto/create-album.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/dto/create-album.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/file/file.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/file/file.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/track/dto/create-track.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/upload.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/upload.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\server\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -68,7 +72,7 @@
       <recent name="C:\Users\Yehor\Documents\music-platform\client\styles" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Start Server">
+  <component name="RunManager" selected="npm.Start Client">
     <configuration name="Start Client" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
@@ -141,6 +145,9 @@
       <workItem from="1657349437026" duration="8414000" />
       <workItem from="1657466141849" duration="624000" />
       <workItem from="1657521865240" duration="5258000" />
+      <workItem from="1657547382681" duration="5944000" />
+      <workItem from="1657619198308" duration="12959000" />
+      <workItem from="1657695787728" duration="11390000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -205,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657126267287</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finished upload form for album upload">
+      <created>1657547446325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657547446325</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -36,11 +36,16 @@ const Index = () => {
   return (
     <>
       <div
-        className={styles.header}
+        className={styles.container}
         style={{
-          background: `linear-gradient(rgb(${aC[0]}, ${aC[1]}, ${aC[2]}) 0%, transparent 100%)`,
+          background: `linear-gradient(rgb(${aC[0]}, ${aC[1]}, ${aC[2]}) 0%, transparent 60%)`,
         }}
-      >
+      ></div>
+      <div
+        className={styles.bg_image}
+        style={{ backgroundImage: `url(http://localhost:5000/${album.image})` }}
+      ></div>
+      <div className={styles.header}>
         <div className={styles.header_image_wrapper}>
           <img
             draggable={false}
@@ -65,8 +70,8 @@ const Index = () => {
             />
           ))}
       </div>
+      {play && <div className={styles.gap}></div>}
     </>
   );
 };
-
 export default Index;

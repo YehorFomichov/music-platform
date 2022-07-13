@@ -26,10 +26,7 @@ const Login = () => {
   };
   return (
     <div className={styles.login_container}>
-      <div
-        className="container-fluid position-absolute"
-        style={{ backgroundColor: "white", maxWidth: "720px" }}
-      >
+      <div className="container">
         <div className={styles.google_button} onClick={loginWithGoogle}>
           <span>Sign in with Google Account</span>
         </div>
@@ -45,6 +42,7 @@ const Login = () => {
               name={"email"}
               value={data.email}
               onChange={handleChange}
+              white={true}
             />
           </div>
           <div className={styles.form_container}>
@@ -54,6 +52,7 @@ const Login = () => {
               name={"password"}
               value={data.password}
               onChange={handleChange}
+              white={true}
             />
           </div>
           <div className={styles.form_check}>

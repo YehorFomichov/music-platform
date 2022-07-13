@@ -35,23 +35,19 @@
   }
 }
 .container {
-  position: absolute;
   top:0;
   left:0;
-  width: 100vw;
-  min-height: 100vh;
   //background-color: #ffffff;
   color: white;
 }
 .header {
-  margin-top: 4%;
   width: 100%;
   h1 {
     font-size: 1.875rem;
     font-weight: 700;
     line-height: 100%;
     text-align: center;
-    margin: 2rem;
+    margin: 1rem 2rem;
   }
 }
 .upload_type_container {
