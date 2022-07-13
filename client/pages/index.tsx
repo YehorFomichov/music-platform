@@ -14,11 +14,6 @@ const Index = () => {
   useEffect(() => {
     loadAlbums();
   }, []);
-  const ulRef = useRef(null);
-  const scrollRight = () => {
-    console.log(ulRef.current.style.width);
-    ulRef.current.scrollLeft += 800;
-  };
   if (isLoading) return <h1>Loading...</h1>;
   return (
     <div className={styles.container}>

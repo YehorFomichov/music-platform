@@ -1,10 +1,8 @@
-$b: 1.5em; // border-width
-$blur: blur(9px);
-$rect: inset(0);
 .container {
     width: 100%;
     max-width: 1240px;
     margin: auto;
+    padding: 0 1vw;
     font-family: 'Raleway', sans-serif;
 }
 .category_header {
@@ -60,7 +58,7 @@ $rect: inset(0);
     flex-flow: row nowrap;
     align-items: center;
     padding: 1rem 0 0 0;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 14vh 0;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
