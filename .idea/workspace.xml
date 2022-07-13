@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Main page">
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Hydration bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/pages/tracks-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/tracks-page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/actionCreators/actionCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actionCreators/actionCreators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/playerSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/playerSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/types/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/types/player.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +136,7 @@
       <workItem from="1657521865240" duration="5258000" />
       <workItem from="1657547382681" duration="5944000" />
       <workItem from="1657619198308" duration="12959000" />
-      <workItem from="1657695787728" duration="13985000" />
+      <workItem from="1657695787728" duration="20143000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -214,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657708315446</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Hydration bug fix">
+      <created>1657718104215</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1657718104215</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +260,7 @@
     <MESSAGE value="Changed upload styles" />
     <MESSAGE value="Finished upload form for album upload" />
     <MESSAGE value="Main page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main page" />
+    <MESSAGE value="Hydration bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hydration bug fix" />
   </component>
 </project>

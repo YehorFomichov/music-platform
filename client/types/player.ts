@@ -6,6 +6,8 @@ export interface PlayerState {
   duration: number;
   currentTime: number;
   pause: boolean;
+  currentPlaylist: null | ITrack[];
+  activeIndex: number;
 }
 
 export enum PlayerActionTypes {

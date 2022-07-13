@@ -10,16 +10,22 @@ interface TrackProps {
   isActive?: boolean;
   onPlay: (id: string) => void;
   index: number;
+  onSetActiveTrack: () => void;
 }
 
-const TrackItem: React.FC<TrackProps> = ({ track, onPlay, index }) => {
+const TrackItem: React.FC<TrackProps> = ({
+  track,
+  onPlay,
+  index,
+  onSetActiveTrack,
+}) => {
   const router = useRouter();
   const { active, pause } = useTypedSelector((state) => state.player);
-  const { playTrack, setActiveTrack, pauseTrack } = useActions();
+  const { playTrack, pauseTrack } = useActions();
   const play = (e) => {
     e.stopPropagation();
     if (active?._id !== track._id) {
-      setActiveTrack(track);
+      onSetActiveTrack();
       playTrack();
       onPlay(track._id);
     } else if (pause) {

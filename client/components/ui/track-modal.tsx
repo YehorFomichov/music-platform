@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import styles from "./track-modal.module.scss";
 import { ITrack } from "../../types/track";
+import { useActions } from "../../hooks/useActions";
 const path = "http://localhost:5000/";
 
 interface TrackModalProps {
@@ -27,6 +28,7 @@ const TrackModal: React.FC<TrackModalProps> = ({
   pause,
 }) => {
   const rangeRef = useRef<HTMLDivElement | null>(null);
+  const { playPrevious, playNext } = useActions();
   const getPercent = useCallback(() => {
     const res = (currentTime / duration) * 100;
     return Math.round(res);
@@ -81,7 +83,7 @@ const TrackModal: React.FC<TrackModalProps> = ({
               <button className={styles.btn_heart}>
                 <i className="bi bi-heart"></i>
               </button>
-              <button className={styles.btn_backward}>
+              <button className={styles.btn_backward} onClick={playPrevious}>
                 <i className="bi bi-skip-backward"></i>
               </button>
               {!pause ? (
@@ -93,7 +95,7 @@ const TrackModal: React.FC<TrackModalProps> = ({
                   <i className="bi bi-play-circle-fill"></i>
                 </button>
               )}
-              <button className={styles.btn_forward}>
+              <button className={styles.btn_forward} onClick={playPrevious}>
                 <i className="bi bi-skip-forward"></i>
               </button>
               <button className={styles.btn_shuffle}>

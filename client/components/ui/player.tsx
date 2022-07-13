@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./player.module.scss";
-import TrackProgress from "../common/track-progress";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useActions } from "../../hooks/useActions";
 import { average } from "color.js";
@@ -11,11 +10,16 @@ let audio;
 const Player = () => {
   const [aC, setAC] = useState([0, 0, 0]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { pause, volume, active, duration, currentTime } = useTypedSelector(
-    (state) => state.player
-  );
-  const { playTrack, pauseTrack, setVolume, setCurrentTime, setDuration } =
-    useActions();
+  const { pause, volume, active, duration, currentTime, currentPlaylist } =
+    useTypedSelector((state) => state.player);
+  const {
+    playTrack,
+    pauseTrack,
+    setVolume,
+    setCurrentTime,
+    setDuration,
+    playNext,
+  } = useActions();
   const setAverageColor = async () => {
     if (!active) return;
     const color = await average(`http://localhost:5000/${active.image}`);
@@ -40,7 +44,6 @@ const Player = () => {
     }
   };
   function play() {
-    console.log(pause);
     if (pause) {
       playTrack();
     } else {
@@ -71,6 +74,13 @@ const Player = () => {
       audio.pause();
     }
   }, [pause]);
+  //          Plays Next When Song Ends           //
+  useEffect(() => {
+    if (!currentPlaylist && !active) return;
+    if (duration === currentTime) {
+      playNext();
+    }
+  }, [currentTime]);
   if (!active) {
     return null;
   }
@@ -112,39 +122,6 @@ const Player = () => {
         onPlay={play}
         pause={pause}
       />
-    </>
-  );
-  return (
-    <>
-      <div className={styles.player}>
-        {!pause ? (
-          <div className={styles.btn} onClick={play}>
-            <i className="bi bi-pause-circle"></i>
-          </div>
-        ) : (
-          <div className={styles.btn} onClick={play}>
-            <i className="bi bi-play-circle"></i>
-          </div>
-        )}
-        <div>{active?.name}</div>
-        <div>{active?.artist}</div>
-        <TrackProgress
-          left={currentTime}
-          right={duration}
-          onChange={changeCurrentTime}
-        />
-        <div
-          style={{
-            marginLeft: "auto",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-          }}
-        >
-          <i className="bi bi-volume-up" style={{ fontSize: "32px" }}></i>
-          <TrackProgress left={volume} right={100} onChange={changeVolume} />
-        </div>
-      </div>
     </>
   );
 };

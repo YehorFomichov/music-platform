@@ -1,13 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { PlayerState } from "../types/player";
 import { ITrack } from "../types/track";
 
 const initialState: PlayerState = {
   active: null,
-  volume: 75,
+  volume: 100,
   duration: 0,
   currentTime: 0,
   pause: true,
+  currentPlaylist: null,
+  activeIndex: 0,
 };
 
 const playerSlice = createSlice({
@@ -34,11 +36,43 @@ const playerSlice = createSlice({
       state.duration = 0;
       state.currentTime = 0;
     },
+    SET_ACTIVE_PLAYLIST: (state, action: PayloadAction<ITrack[]>) => {
+      state.currentPlaylist = action.payload;
+      state.duration = 0;
+      state.currentTime = 0;
+    },
+    SET_ACTIVE_INDEX: (state, action: PayloadAction<number>) => {
+      state.activeIndex = action.payload;
+    },
+    NEXT: (state) => {
+      state.activeIndex =
+        state.currentPlaylist.length - 1 === state.activeIndex
+          ? 0
+          : state.activeIndex + 1;
+      state.active = state.currentPlaylist[state.activeIndex];
+    },
+    PREVIOUS: (state) => {
+      state.activeIndex =
+        state.activeIndex === 0
+          ? state.currentPlaylist.length - 1
+          : state.activeIndex - 1;
+      state.active = state.currentPlaylist[state.activeIndex];
+    },
   },
 });
 const { reducer: playerReducer } = playerSlice;
-const { PLAY, PAUSE, SET_CURRENT_TIME, SET_DURATION, SET_ACTIVE, SET_VOLUME } =
-  playerSlice.actions;
+const {
+  PLAY,
+  PAUSE,
+  NEXT,
+  PREVIOUS,
+  SET_CURRENT_TIME,
+  SET_DURATION,
+  SET_ACTIVE,
+  SET_VOLUME,
+  SET_ACTIVE_PLAYLIST,
+  SET_ACTIVE_INDEX,
+} = playerSlice.actions;
 export const playTrack = () => (dispatch) => {
   dispatch(PLAY());
 };
@@ -56,6 +90,18 @@ export const setDuration = (duration: number) => (dispatch) => {
 };
 export const setActiveTrack = (track: ITrack) => (dispatch) => {
   dispatch(SET_ACTIVE(track));
+};
+export const setActivePlaylist = (playlist: ITrack[]) => (dispatch) => {
+  dispatch(SET_ACTIVE_PLAYLIST(playlist));
+};
+export const setCurrentActiveTrackIndex = (index: number) => (dispatch) => {
+  dispatch(SET_ACTIVE_INDEX(index));
+};
+export const playNext = () => (dispatch) => {
+  dispatch(NEXT());
+};
+export const playPrevious = () => (dispatch) => {
+  dispatch(PREVIOUS());
 };
 export const getPlayer = () => (state) => state.player.active;
 export default playerReducer;

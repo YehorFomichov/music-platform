@@ -1,7 +1,11 @@
 import {
   pauseTrack,
+  playNext,
+  playPrevious,
   playTrack,
+  setActivePlaylist,
   setActiveTrack,
+  setCurrentActiveTrackIndex,
   setCurrentTime,
   setDuration,
   setVolume,
@@ -18,4 +22,8 @@ export default {
   loadTracks,
   openModal,
   closeModal,
+  setActivePlaylist,
+  setCurrentActiveTrackIndex,
+  playNext,
+  playPrevious,
 };

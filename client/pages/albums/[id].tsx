@@ -4,6 +4,9 @@ import { average } from "color.js";
 import styles from "../../components/pages/tracks-page.module.scss";
 import TrackItem from "../../components/ui/track-item";
 import albumService from "../../service/albumService";
+import { useActions } from "../../hooks/useActions";
+import { ITrack } from "../../types/track";
+import { setCurrentActiveTrackIndex } from "../../store/playerSlice";
 
 const Index = () => {
   const router = useRouter();
@@ -32,7 +35,15 @@ const Index = () => {
     // @ts-ignore
     setAC(color);
   };
+  const { setActiveTrack, setActivePlaylist, setCurrentActiveTrackIndex } =
+    useActions();
+  function handleSetActiveTrack(track: ITrack, index: number) {
+    setActiveTrack(track);
+    setActivePlaylist(album.tracks);
+    setCurrentActiveTrackIndex(index);
+  }
   if (!album) return <h2>Loading...</h2>;
+
   return (
     <>
       <div
@@ -67,6 +78,7 @@ const Index = () => {
               isActive={track._id === play}
               onPlay={handlePlay}
               index={index}
+              onSetActiveTrack={() => handleSetActiveTrack(track, index)}
             />
           ))}
       </div>
