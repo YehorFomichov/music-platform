@@ -52,11 +52,4 @@ export class AlbumService {
     await album.save();
     return album;
   }
-  // async addAlbumToGenre(dto: AddToGenreDto): Promise<Genres> {
-  //   const track = await this.G.findById(dto.trackId);
-  //   const comment = await this.commentModel.create({ ...dto });
-  //   track.comments.push(comment._id);
-  //   await track.save();
-  //   return comment;
-  // }
 }

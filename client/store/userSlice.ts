@@ -37,10 +37,14 @@ const userSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
+    userLogout: (state) => {
+      state.user = null;
+    },
   },
 });
 const { reducer: userReducer } = userSlice;
-const { userRequested, userReceived, userRequestFailed } = userSlice.actions;
+const { userRequested, userReceived, userRequestFailed, userLogout } =
+  userSlice.actions;
 
 export const loginWithEmail = (email, password) => async (dispatch) => {
   dispatch(userRequested);
@@ -74,5 +78,7 @@ export const loginWithGoogle = () => async (dispatch) => {
     dispatch(userRequestFailed(e.message));
   }
 };
-export const addAlbumToUser = () => async (dispatch) => {};
+export const logOut = () => async (dispatch) => {
+  dispatch(userLogout());
+};
 export default userReducer;

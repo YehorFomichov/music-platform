@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Implemented auto continue after ending of the song alongside previous and next buttons">
-      <change afterPath="$PROJECT_DIR$/client/pages/404.tsx" afterDir="false" />
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Implemented onClick for duration slider">
+      <change afterPath="$PROJECT_DIR$/client/pages/profile.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/styles/profile.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/main-page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/playerSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/playerSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/actionCreators/userActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actionCreators/userActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/userSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +134,8 @@
       <workItem from="1657521865240" duration="5258000" />
       <workItem from="1657547382681" duration="5944000" />
       <workItem from="1657619198308" duration="12959000" />
-      <workItem from="1657695787728" duration="26719000" />
+      <workItem from="1657695787728" duration="27366000" />
+      <workItem from="1657777248058" duration="4389000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -230,7 +228,28 @@
       <option name="project" value="LOCAL" />
       <updated>1657729175296</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Redirect">
+      <created>1657743380041</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657743380041</updated>
+    </task>
+    <task id="LOCAL-00015" summary="--black color change">
+      <created>1657743436615</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1657743436615</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implemented onClick for duration slider">
+      <created>1657743529668</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657743529668</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +289,9 @@
     <MESSAGE value="Main page" />
     <MESSAGE value="Hydration bug fix" />
     <MESSAGE value="Implemented auto continue after ending of the song alongside previous and next buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented auto continue after ending of the song alongside previous and next buttons" />
+    <MESSAGE value="Redirect" />
+    <MESSAGE value="--black color change" />
+    <MESSAGE value="Implemented onClick for duration slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented onClick for duration slider" />
   </component>
 </project>

@@ -1,2 +1,2 @@
-import { addAlbumToUser, loginWithEmail, loginWithGoogle } from "../userSlice";
-export default { addAlbumToUser, loginWithEmail, loginWithGoogle };
+import { loginWithEmail, loginWithGoogle, logOut } from "../userSlice";
+export default { loginWithEmail, loginWithGoogle, logOut };
