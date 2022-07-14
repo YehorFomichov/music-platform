@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import styles from "./track-modal.module.scss";
 import { ITrack } from "../../types/track";
 import { useActions } from "../../hooks/useActions";
-const path = "http://localhost:5000/";
+const path = "/api/";
 
 interface TrackModalProps {
   active: ITrack;

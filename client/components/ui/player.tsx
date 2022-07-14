@@ -4,7 +4,7 @@ import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { useActions } from "../../hooks/useActions";
 import { average } from "color.js";
 import TrackModalModule from "./track-modal";
-const path = "http://localhost:5000/";
+const path = "/api/";
 let audio;
 
 const Player = () => {
@@ -22,7 +22,7 @@ const Player = () => {
   } = useActions();
   const setAverageColor = async () => {
     if (!active) return;
-    const color = await average(`http://localhost:5000/${active.image}`);
+    const color = await average(`/api/${active.image}`);
     // @ts-ignore
     setAC(color);
   };
@@ -31,7 +31,7 @@ const Player = () => {
   };
   const setAudio = () => {
     if (active) {
-      audio.src = `http://localhost:5000/${active.audio}`;
+      audio.src = `/api/${active.audio}`;
       audio.volume = volume / 100;
       audio.onloadedmetadata = () => {
         setDuration(Math.ceil(audio.duration));

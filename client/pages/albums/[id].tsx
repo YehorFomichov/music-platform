@@ -31,7 +31,7 @@ const Index = () => {
   };
   const getAverageColor = async () => {
     if (!album) return;
-    const color = await average(`http://localhost:5000/${album.image}`);
+    const color = await average(`/api/${album.image}`);
     // @ts-ignore
     setAC(color);
   };
@@ -54,14 +54,14 @@ const Index = () => {
       ></div>
       <div
         className={styles.bg_image}
-        style={{ backgroundImage: `url(http://localhost:5000/${album.image})` }}
+        style={{ backgroundImage: `url(/api/${album.image})` }}
       ></div>
       <div className={styles.header}>
         <div className={styles.header_image_wrapper}>
           <img
             draggable={false}
             className={styles.header_image}
-            src={`http://localhost:5000/${album.image}`}
+            src={`/api/${album.image}`}
           />
         </div>
         <h1>{album.name}</h1>

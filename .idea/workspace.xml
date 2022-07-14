@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Implemented onClick for duration slider">
-      <change afterPath="$PROJECT_DIR$/client/pages/profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/styles/profile.module.scss" afterDir="false" />
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Implemented profile page">
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile.dev" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/actionCreators/userActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actionCreators/userActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/userSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/album/album.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/pages/tracks-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/pages/tracks-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/player.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/player.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/track-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/tracks/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/tracks/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/upload/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/upload/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/service/httpService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/service/httpService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,28 +40,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Yehor/Documents/music-platform&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Yehor/Documents/music-platform",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Yehor\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "C:\\Users\\Yehor\\Documents\\music-platform\\client\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yehor\Documents\music-platform" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\components\common" />
       <recent name="C:\Users\Yehor\Documents\music-platform\server\models" />
       <recent name="C:\Users\Yehor\Documents\music-platform\server\src\genres" />
       <recent name="C:\Users\Yehor\Documents\music-platform\server\src\user" />
-      <recent name="C:\Users\Yehor\Documents\music-platform\server\src\album" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Yehor\Documents\music-platform\client\pages\upload" />
@@ -277,6 +290,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Created sign up page, login page, updated main page and added albums service" />
     <MESSAGE value="Created a genres model and tied model together" />
     <MESSAGE value="Upload album form" />
@@ -292,6 +306,7 @@
     <MESSAGE value="Redirect" />
     <MESSAGE value="--black color change" />
     <MESSAGE value="Implemented onClick for duration slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented onClick for duration slider" />
+    <MESSAGE value="Implemented profile page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented profile page" />
   </component>
 </project>

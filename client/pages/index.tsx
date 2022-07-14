@@ -32,7 +32,7 @@ const Index = () => {
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src={`http://localhost:5000/${e.image}`}
+                src={`/api/${e.image}`}
                 onClick={() => router.push(`/albums/${e._id}`)}
               />
             </div>

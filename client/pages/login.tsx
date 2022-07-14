@@ -16,10 +16,18 @@ const Login = () => {
       return { ...prevstate, [target.name]: target.value };
     });
   };
+  const handleLoginWithGoogle = async () => {
+    try {
+      const res = await loginWithGoogle();
+      if (res) await router.push("/");
+    } catch (e) {
+      console.log("Something went wrong");
+    }
+  };
   const logInWithEmail = async () => {
     try {
-      await loginWithEmail(data.email, data.password);
-      await router.push("/");
+      const res = await loginWithEmail(data.email, data.password);
+      if (res) await router.push("/");
     } catch (e) {
       console.log("Something went wrong");
     }
@@ -27,7 +35,7 @@ const Login = () => {
   return (
     <div className={styles.login_container}>
       <div className="container">
-        <div className={styles.google_button} onClick={loginWithGoogle}>
+        <div className={styles.google_button} onClick={handleLoginWithGoogle}>
           <span>Sign in with Google Account</span>
         </div>
         <div className={styles.facebook_button}>

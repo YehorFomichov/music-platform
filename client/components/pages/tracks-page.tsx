@@ -48,16 +48,17 @@ const TracksPage = () => {
         </div>
       </div>
       <div className={styles.tracks_list_container}>
-        {!isLoading &&
-          tracks.map((track, index) => (
-            <TrackItem
-              key={track._id}
-              track={track}
-              isActive={track._id === play}
-              onPlay={handlePlay}
-              index={index}
-            />
-          ))}
+        {/*{!isLoading &&*/}
+        {/*  tracks.map((track, index) => (*/}
+        {/*    <TrackItem*/}
+        {/*      key={track._id}*/}
+        {/*      track={track}*/}
+        {/*      isActive={track._id === play}*/}
+        {/*      onPlay={handlePlay}*/}
+        {/*      index={index}*/}
+        {/*      */}
+        {/*    />*/}
+        {/*  ))}*/}
       </div>
     </>
   );

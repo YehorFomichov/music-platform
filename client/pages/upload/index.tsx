@@ -34,7 +34,7 @@ const Upload = () => {
           )}
           <label htmlFor="album">
             <div className={styles.select_label}>
-              <img src="http://localhost:3000/album.png" />
+              <img src="/album.png" />
             </div>
             <h2 className={styles.select_label_text}>Album/EP</h2>
           </label>
@@ -53,7 +53,7 @@ const Upload = () => {
           )}
           <label htmlFor="track">
             <div className={styles.select_label}>
-              <img src="http://localhost:3000/track.png" />
+              <img src="/track.png" />
             </div>
             <h2 className={styles.select_label_text}>Song</h2>
           </label>

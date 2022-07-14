@@ -16,7 +16,7 @@ const TrackPage = ({ serverTrack }) => {
       </div>
       <div className={styles.info}>
         <div className={styles.image}>
-          <img src={"http://localhost:5000/" + track.image} />
+          <img src={"/api/" + track.image} />
         </div>
         <div className={styles.about}>
           <h2 className={styles.composer}>Artist: {track.artist}</h2>
@@ -41,7 +41,7 @@ const TrackPage = ({ serverTrack }) => {
   );
 };
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const { data } = await axios.get(`http://localhost:5000/tracks/${params.id}`);
+  const { data } = await axios.get(`/api/tracks/${params.id}`);
   return {
     props: {
       serverTrack: data,

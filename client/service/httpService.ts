@@ -4,7 +4,7 @@ import { getKey } from "../utils/firebase.utils";
 import authService from "./auth.service";
 
 const http = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "/api",
 });
 // http.interceptors.request.use(
 //   async function (config) {
