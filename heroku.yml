@@ -1,4 +1,3 @@
 build:
   docker:
-    web_beatize-server: server/Dockerfile.dev
-    web_beatize: client/Dockerfile.dev
+    web: client/Dockerfile.dev
