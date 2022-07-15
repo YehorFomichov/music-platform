@@ -97,7 +97,7 @@ const Player = () => {
           style={{ backgroundColor: `rgb(${aC[0]}, ${aC[1]}, ${aC[2]}, 0.5)` }}
         >
           <div className={styles.track_container}>
-            <img src={path + active.image} />
+            <img src={path + "/" + active.image} />
             <div className={styles.track_about} onClick={openModal}>
               <p>
                 <b>{active.name}</b>

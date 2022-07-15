@@ -63,7 +63,7 @@ const TrackModal: React.FC<TrackModalProps> = ({
           <img
             draggable={false}
             className={styles.header_image}
-            src={path + active.image}
+            src={path + "/" + active.image}
           />
         </div>
         <h1>{active.name}</h1>
