@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Deployment">
-      <change afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heroku.yml" beforeDir="false" afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +29,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Yehor/Documents/music-platform",
+    "last_opened_file_path": "C:/Users/Yehor/Documents/music-platform/server",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -42,11 +41,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yehor\Documents\music-platform\server" />
       <recent name="C:\Users\Yehor\Documents\music-platform" />
       <recent name="C:\Users\Yehor\Documents\music-platform\client\components\common" />
       <recent name="C:\Users\Yehor\Documents\music-platform\server\models" />
       <recent name="C:\Users\Yehor\Documents\music-platform\server\src\genres" />
-      <recent name="C:\Users\Yehor\Documents\music-platform\server\src\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Yehor\Documents\music-platform\client\pages\upload" />
@@ -133,6 +132,7 @@
       <workItem from="1657619198308" duration="12959000" />
       <workItem from="1657695787728" duration="27366000" />
       <workItem from="1657777248058" duration="4389000" />
+      <workItem from="1657869260887" duration="862000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -253,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657815881952</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Deployment">
+      <created>1657870416522</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657870416522</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
