@@ -6,7 +6,6 @@ import TrackItem from "../../components/ui/track-item";
 import albumService from "../../service/albumService";
 import { useActions } from "../../hooks/useActions";
 import { ITrack } from "../../types/track";
-import { setCurrentActiveTrackIndex } from "../../store/playerSlice";
 import config from "../../utils/config.json";
 
 const Index = () => {

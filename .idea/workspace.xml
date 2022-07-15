@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Mobile media query">
-      <change beforePath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/navbar.module.scss" afterDir="false" />
+    <list default="true" id="4ba44273-8e63-4228-830a-856678511f55" name="Changes" comment="Container max-width">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/albums/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/albums/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +135,7 @@
       <workItem from="1657619198308" duration="12959000" />
       <workItem from="1657695787728" duration="27366000" />
       <workItem from="1657777248058" duration="4389000" />
-      <workItem from="1657869260887" duration="12076000" />
+      <workItem from="1657869260887" duration="12677000" />
     </task>
     <task id="LOCAL-00001" summary="Created sign up page, login page, updated main page and added albums service">
       <created>1655277984473</created>
@@ -358,7 +361,28 @@
       <option name="project" value="LOCAL" />
       <updated>1657883329676</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Navbar max-width">
+      <created>1657883879863</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1657883879863</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Navbar max-width">
+      <created>1657883944729</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1657883944729</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Container max-width">
+      <created>1657884141607</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1657884141607</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +430,8 @@
     <MESSAGE value="Deployment" />
     <MESSAGE value="Track modal image path bug fix" />
     <MESSAGE value="Mobile media query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mobile media query" />
+    <MESSAGE value="Navbar max-width" />
+    <MESSAGE value="Container max-width" />
+    <option name="LAST_COMMIT_MESSAGE" value="Container max-width" />
   </component>
 </project>

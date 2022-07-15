@@ -8,8 +8,10 @@ body {
     --grey: #E5E5E5;
     --white: rgb(255, 255, 255);
     background: var(--black);
+}
+.main-container {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: auto;
 }
 html {
     line-height: 1.15; /* 1 */

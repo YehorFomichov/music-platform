@@ -10,8 +10,10 @@ export default function Document() {
         />
       </Head>
       <body id={"bootstrap-overrides"}>
-        <Main />
-        <NextScript />
+        <div className="main-container">
+          <Main />
+          <NextScript />
+        </div>
       </body>
     </Html>
   );
