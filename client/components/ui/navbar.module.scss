@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-between;
   background: transparent;
+  max-width: 1440px;
+  margin-top: auto;
   @media (max-width: 480px) {
     flex-direction: column;
     align-items: center;
