@@ -1,3 +1,4 @@
 build:
   docker:
-    web: Dockerfile.dev
+    web_client: client/Dockerfile.dev
+    web_server: server/Dockerfile.dev
