@@ -7,6 +7,7 @@ import albumService from "../../service/albumService";
 import { useActions } from "../../hooks/useActions";
 import { ITrack } from "../../types/track";
 import { setCurrentActiveTrackIndex } from "../../store/playerSlice";
+import config from "../../utils/config.json";
 
 const Index = () => {
   const router = useRouter();
@@ -31,7 +32,7 @@ const Index = () => {
   };
   const getAverageColor = async () => {
     if (!album) return;
-    const color = await average(`/api/${album.image}`);
+    const color = await average(`${config.backendPath}/${album.image}`);
     // @ts-ignore
     setAC(color);
   };
@@ -54,14 +55,14 @@ const Index = () => {
       ></div>
       <div
         className={styles.bg_image}
-        style={{ backgroundImage: `url(/api/${album.image})` }}
+        style={{ backgroundImage: `url(${config.backendPath}/${album.image})` }}
       ></div>
       <div className={styles.header}>
         <div className={styles.header_image_wrapper}>
           <img
             draggable={false}
             className={styles.header_image}
-            src={`/api/${album.image}`}
+            src={`${config.backendPath}/${album.image}`}
           />
         </div>
         <h1>{album.name}</h1>

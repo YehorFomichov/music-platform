@@ -3,6 +3,8 @@ import styles from "../components/pages/main-page.module.scss";
 import router from "next/router";
 import albumService from "../service/albumService";
 import { IAlbum } from "../types/albums";
+import config from "../utils/config.json";
+
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [albums, setAlbums] = useState<IAlbum[] | null>(null);
@@ -32,7 +34,7 @@ const Index = () => {
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src={`/api/${e.image}`}
+                src={`${config.backendPath}/${e.image}`}
                 onClick={() => router.push(`/albums/${e._id}`)}
               />
             </div>
