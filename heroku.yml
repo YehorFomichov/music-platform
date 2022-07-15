@@ -1,4 +1,3 @@
 build:
   docker:
-    web: client/Dockerfile.dev
-    web_api: server/Dockerfile.dev
+    web: server/Dockerfile
